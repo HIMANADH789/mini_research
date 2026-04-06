@@ -1,0 +1,8 @@
+Starting Experiment
+Experiment Path: experiments\exp_002_attention_unet
+Epoch 0 | Loss: 0.3383
+Epoch 1 | Loss: 0.1011
+Epoch 2 | Loss: 0.0580
+Epoch 3 | Loss: 0.0461
+Epoch 4 | Loss: 0.0366
+Epoch 5 | Loss: 0.0345

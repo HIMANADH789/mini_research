@@ -1,0 +1,11 @@
+# Virtual environment
+.venv/
+
+# Large datasets
+data/
+
+# Experiment artifacts (large/generated)
+experiments/*/checkpoints/
+
+# Common Python cache artifacts
+**/__pycache__/
