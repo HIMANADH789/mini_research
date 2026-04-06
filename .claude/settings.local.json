@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cmd /c \"dir C:\\\\23071A12A0_mini_project\\\\src\\\\boilerplates /b\")",
+      "Bash(python -c \"import os; print\\(os.getcwd\\(\\)\\)\")"
+    ]
+  }
+}

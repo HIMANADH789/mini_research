@@ -6,7 +6,7 @@
 #   Residual blocks prevent vanishing gradients in deeper network
 #   Expected: stronger than UNet3D v1 (+2-4% mean Dice)
 #
-# Data pipeline: v1 (augmentation + percentile clip + TC-biased sampling)
+# Data pipeline: v0 (existing validated pipeline — same as Exp 6-8)
 # Trainer:       segmentation_v2 (warmup + grad clip + per-class Dice log)
 # Evaluator:     evaluation_v1   (75% overlap + CC filter)
 # ============================================================
@@ -16,7 +16,7 @@ seed: 42
 use_gpu: true
 
 versions:
-  data: v1
+  data: v0
   trainer: segmentation_v2
   evaluation: v1
 
