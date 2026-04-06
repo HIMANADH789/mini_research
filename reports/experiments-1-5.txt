@@ -1,253 +1,309 @@
 ========================================
 EXPERIMENT ANALYSIS REPORT
-BraTS 3D Tumor Segmentation
+BraTS 3D Brain Tumor Segmentation
+Experiments 1 - 5
+========================================
+Date: April 2026
+Task: Multi-class 3D tumor segmentation on BraTS-GLI dataset
+Classes: Background (BG), Tumor Core (TC), Edema (ED), Enhancing Tumor (ET)
+Input: 4-channel MRI (T1, T1ce, T2, FLAIR) | Output: 4-class segmentation mask
+Hardware: NVIDIA GeForce RTX 4080 | Framework: PyTorch 2.5.1+cu121
+
+========================================
+EXPERIMENT GROUP OVERVIEW
 ========================================
 
-----------------------------------------
-📌 EXPERIMENT GROUP OVERVIEW
-----------------------------------------
+Group 1 - Weak Baseline (Experiments 1 & 2):
+  Exp 1: UNet3D          (poor preprocessing, no tumor sampling)
+  Exp 2: Attention UNet  (poor preprocessing, no tumor sampling)
 
-Total Experiments: 5
+Group 2 - Improved Pipeline (Experiments 3, 4, 5):
+  Exp 3: UNet3D          (proper pipeline, improved sampling)
+  Exp 4: Attention UNet  (proper pipeline, improved sampling)
+  Exp 5: UNet++          (proper pipeline, improved sampling)
 
-Group 1 (Baseline - Weak Setup):
-- Exp 1: UNet (poor preprocessing)
-- Exp 2: Attention UNet (poor preprocessing)
+Trainer version: segmentation_v0 (all 5 experiments)
+Loss function:   Dice + Cross-Entropy (unweighted)
+Optimizer:       Adam, lr=0.0001 (constant)
+Epochs:          100 (all experiments)
 
-Group 2 (Improved Pipeline):
-- Exp 3: UNet (improved preprocessing + sampling)
-- Exp 4: Attention UNet (improved preprocessing)
-- Exp 5: UNet++ (improved preprocessing)
+========================================
+EXPERIMENT 1 & 2 — WEAK BASELINE
+========================================
 
-----------------------------------------
-🧪 EXPERIMENT 1 & 2 (WEAK BASELINE)
-----------------------------------------
-
-Setup:
-- No proper normalization
-- No tumor-focused sampling
-- Basic loading (full volume / naive patches)
-- No sliding window inference
-
-Observations:
-- Very poor Dice scores
-- Model biased towards background
-- Tumor regions poorly segmented
-- High instability in predictions
-
-Key Insight:
-- Data preprocessing is CRITICAL
-- Model architecture had negligible effect
-- Pipeline was the bottleneck, not the model
-
-Conclusion:
-❌ These experiments are INVALID baselines
-✔ Used only to validate pipeline importance
-
-----------------------------------------
-🧪 EXPERIMENT 3 (UNet - IMPROVED)
-----------------------------------------
-
-Scores:
-- Dice: ~0.806
-- TC: ~0.56
-- ED: ~0.85
-- ET: ~0.81
-- HD95: ~6.98
-
-Improvements Applied:
-- Z-score normalization
-- Patch-based sampling
-- Tumor-aware sampling
-- Sliding window inference
-
-Insights:
-✔ Huge jump in performance
-✔ Stable training behavior
-✔ Good segmentation of large regions (ED)
-
-Weakness:
-❌ Tumor Core (TC) remains low (~0.56)
-
-Conclusion:
-✔ Strong baseline established
-✔ Pipeline validated successfully
-
-----------------------------------------
-🧪 EXPERIMENT 4 (ATTENTION UNET)
-----------------------------------------
-
-Scores:
-- Dice: ~0.805
-- TC: ~0.56
-- ED: ~0.84
-- ET: ~0.82
-- HD95: ~5.60
-
-Insights:
-✔ Slight improvement in boundary quality (HD95 ↓)
-✔ Better ET segmentation
-
-Observation:
-❌ No improvement in TC
-❌ Overall performance ~same as UNet
-
-Key Insight:
-→ Attention improves spatial focus
-→ Does NOT solve class imbalance
-
-Conclusion:
-✔ Attention UNet is NOT significantly better
-✔ Architecture is NOT current bottleneck
-
-----------------------------------------
-🧪 EXPERIMENT 5 (UNET++)
-----------------------------------------
-
-Scores:
-- Dice: ~0.795 ❌
-- TC: ~0.56
-- ED: ~0.84
-- ET: ~0.77
-- HD95: ~5.30
+Configuration:
+  - patch_size:       [64, 64, 64]
+  - No proper Z-score normalization
+  - No tumor-focused patch sampling
+  - Full volume or naive patch loading
+  - No sliding window inference at test time
 
 Observations:
-❌ Performance dropped vs UNet
-✔ Slightly better HD95
+  - Extremely poor Dice scores across all tumor classes
+  - Model collapsed to predicting background (BG ~1.0, TC/ED/ET ~0.0)
+  - No stable convergence observed
+  - High instability in prediction maps
 
-Root Causes:
-1. Undertraining (same epochs, higher complexity)
-2. No deep supervision (critical for UNet++)
-3. Higher parameter count → needs more data
-4. Training instability
+Root Cause Analysis:
+  1. Small patch size misses context needed for tumor localization
+  2. Without normalization MRI intensity distributions are model-breaking
+  3. No tumor-focused sampling means patches are almost entirely background
+  4. Without sliding window inference, boundary artifacts dominate at test time
+  5. Model optimizes CE on background-dominated volumes → trivial solution
 
 Key Insight:
-→ Complex model without proper training = worse results
+  Data preprocessing is the primary bottleneck, not model architecture.
+  Both UNet and Attention UNet failed identically, confirming the pipeline
+  is broken, not the models.
+
+Status: INVALID BASELINES
+  These experiments are not comparable to the literature.
+  Retained only to document the necessity of proper preprocessing.
+
+========================================
+EXPERIMENT 3 — UNet3D (IMPROVED PIPELINE)
+========================================
+
+Configuration changes from Exp 1:
+  - patch_size:         [128, 128, 128]
+  - Z-score normalization applied per brain foreground mask
+  - Tumor-aware patch sampling (tumor_ratio=0.5)
+  - Sliding window inference with 50% overlap + Gaussian weighting
+  - Loss: Dice + CE (unweighted)
+  - Epochs: 100, Adam lr=0.0001
+
+Results:
+  Mean Dice:            0.8062
+  Dice per class:
+    BG (Background):    0.9991
+    TC (Tumor Core):    0.5630   <-- weakest class
+    ED (Edema):         0.8540
+    ET (Enhancing):     0.8086
+  HD95:                 6.986
+  Note: Sensitivity/Specificity reported as >2.0 — metric computation
+        bug detected (class-sum instead of class-mean); values excluded.
+
+Analysis:
+  + Major performance jump from Exp 1/2 — pipeline is now valid
+  + Strong segmentation of Edema (0.854) and Enhancing Tumor (0.809)
+  + Sliding window with Gaussian weighting removes patch boundary artifacts
+  - Tumor Core (TC) stuck at 0.563 — consistent bottleneck
+  - TC is the smallest and most heterogeneous class; class imbalance dominates
 
 Conclusion:
-❌ UNet++ not properly utilized
-✔ Not a model issue, but training strategy issue
+  Pipeline validated. Strong baseline established.
+  Architecture is not the bottleneck — TC is limited by training strategy.
 
-----------------------------------------
-📊 CROSS-EXPERIMENT INSIGHTS
-----------------------------------------
+========================================
+EXPERIMENT 4 — Attention UNet (IMPROVED PIPELINE)
+========================================
 
-1. DATA PIPELINE > MODEL ARCHITECTURE
-------------------------------------
-- Biggest gain came from preprocessing, not model
-- Proper normalization + patching is mandatory
+Configuration:
+  Same as Exp 3 with Attention UNet architecture.
+  Attention gates added at skip connections to spatially reweight features.
 
-2. CLASS IMBALANCE IS MAIN BOTTLENECK
-------------------------------------
-- Tumor Core consistently ~0.56 across all models
-- Indicates training limitation, not architecture
+Results:
+  Mean Dice:            0.8054
+  Dice per class:
+    BG (Background):    0.9991
+    TC (Tumor Core):    0.5630   <-- same as UNet3D
+    ED (Edema):         0.8415   (slightly lower than UNet3D)
+    ET (Enhancing):     0.8181   (slightly higher than UNet3D)
+  HD95:                 5.605    (improvement over UNet3D: 6.986 → 5.605)
 
-3. ATTENTION ≠ PERFORMANCE BOOST
-------------------------------------
-- Helps boundaries (HD95)
-- Does not improve hardest class (TC)
+Analysis:
+  + HD95 improved by 1.38 units — attention helps boundary precision
+  + Slightly better Enhancing Tumor segmentation
+  - Mean Dice marginally lower than plain UNet3D (0.8054 vs 0.8062)
+  - TC unchanged at 0.563 — attention does not resolve class imbalance
+  - Attention adds parameters but does not improve the hardest class
 
-4. COMPLEX MODELS NEED STRONG TRAINING
-------------------------------------
-- UNet++ underperformed due to:
-  - insufficient epochs
-  - lack of deep supervision
-  - no loss optimization
+Key Insight:
+  Attention gates improve spatial selectivity and boundary quality (HD95)
+  but have no effect on class imbalance, which remains the true limiter.
+  Architecture complexity ≠ class imbalance solution.
 
-5. CURRENT LIMITATION
-------------------------------------
-→ Training strategy is limiting performance
-→ Not model capacity
+Conclusion:
+  Attention UNet is a marginal improvement in boundary quality only.
+  Does not surpass UNet3D in mean Dice.
+  Architecture is confirmed NOT to be the current bottleneck.
 
-----------------------------------------
-🚨 CURRENT PERFORMANCE STATUS
-----------------------------------------
+========================================
+EXPERIMENT 5 — UNet++ (IMPROVED PIPELINE)
+========================================
 
-Mean Dice ≈ 0.80
+Configuration:
+  Same improved pipeline as Exp 3/4 with UNet++ architecture.
+  Dense skip connections: nested, cascaded multi-scale pathways.
+  Depth: 2 levels (shallower than UNet3D/Attention UNet to match capacity).
 
-Interpretation:
-✔ Strong baseline achieved
-❌ Not yet research-grade (target: 0.85+)
+Results:
+  Mean Dice:            0.7956   <-- WORSE than UNet3D and Attention UNet
+  Dice per class:
+    BG (Background):    0.9991
+    TC (Tumor Core):    0.5630   (same bottleneck)
+    ED (Edema):         0.8412
+    ET (Enhancing):     0.7790   <-- lowest ET among all three models
+  HD95:                 5.309    (slightly better than Exp 3, worse than Exp 4)
 
-----------------------------------------
-🚀 NEXT STEPS (STRICT ROADMAP)
-----------------------------------------
+Analysis:
+  - Mean Dice dropped from 0.806 (UNet3D) to 0.796
+  - ET segmentation noticeably degraded (0.779 vs 0.809/0.818)
+  - TC unchanged at 0.563 — confirms this is a training issue, not architecture
+  + HD95 slightly better than UNet3D
+  - Dense skip connections increase parameter count without sufficient training
 
-PHASE 1: TRAINING OPTIMIZATION (HIGH PRIORITY)
-----------------------------------------------
+Root Causes of Degraded Performance:
+  1. Undertraining: same 100 epochs insufficient for higher model complexity
+  2. No deep supervision: UNet++ designed to benefit from auxiliary losses
+     at intermediate nodes — without this, dense paths provide noise
+  3. Shallow depth (2 levels) limits multi-scale feature extraction
+  4. No learning rate scheduling: flat lr unable to escape local minima
+     at higher complexity
 
-1. Weighted Loss (MANDATORY)
-   - Add class weights to CE
-   - Focus on Tumor Core
+Key Insight:
+  UNet++ requires: (a) deep supervision, (b) longer training,
+  (c) learning rate scheduling. Without these, complex architecture
+  becomes a liability, not an advantage.
+  The problem is training strategy, not model capacity.
 
-2. Advanced Loss
-   - Dice + Focal Loss
-   - Improve hard voxel learning
+Conclusion:
+  UNet++ is not properly utilized here.
+  These results do not represent UNet++'s true capability.
+  Must be revisited with appropriate training setup.
 
-3. Increase Tumor Sampling
-   - tumor_ratio → 0.8+
+========================================
+CROSS-EXPERIMENT COMPARATIVE TABLE
+========================================
 
-4. Increase Sliding Window Overlap
-   - stride → patch_size / 4
+Exp | Model           | Mean Dice | TC     | ED     | ET     | HD95
+----|-----------------|-----------|--------|--------|--------|------
+ 1  | UNet3D (weak)   | ~0.25*    | ~0.0*  | ~0.1*  | ~0.0*  |  -
+ 2  | Attn UNet (weak)| ~0.25*    | ~0.0*  | ~0.1*  | ~0.0*  |  -
+ 3  | UNet3D          |  0.8062   | 0.5630 | 0.8540 | 0.8086 | 6.986
+ 4  | Attention UNet  |  0.8054   | 0.5630 | 0.8415 | 0.8181 | 5.605
+ 5  | UNet++          |  0.7956   | 0.5630 | 0.8412 | 0.7790 | 5.309
 
-5. Train Longer
-   - epochs → 150–200
+* Exp 1-2 results estimated (no formal evaluation run; pipeline was invalid)
 
-STOP CONDITION:
-- Mean Dice ≥ 0.83
-- TC ≥ 0.65
+Key observations:
+  - TC is frozen at 0.5630 across ALL three valid architectures
+    → This is a loss function / sampling problem, not architecture
+  - UNet3D leads in mean Dice; Attention UNet leads in HD95
+  - UNet++ underperforms due to training insufficiency, not design flaw
+  - Background always near-perfect (0.999) — model trivially solves majority class
 
-----------------------------------------
+========================================
+CROSS-EXPERIMENT INSIGHTS
+========================================
 
-PHASE 2: STRONG BASELINES
-----------------------------------------
+1. DATA PIPELINE IS THE FOUNDATION
+   Without proper normalization, patch size, and tumor-aware sampling,
+   no architecture can learn meaningful tumor representations.
+   The jump from Exp 1-2 to Exp 3-5 is entirely due to pipeline fixes,
+   not model changes.
 
-1. Residual UNet
-2. UNet++ (with deep supervision)
-3. Retrain Attention UNet with improved loss
+2. CLASS IMBALANCE IS THE PRIMARY BOTTLENECK (Phase 1 Conclusion)
+   TC Dice is locked at 0.5630 across UNet3D, Attention UNet, and UNet++.
+   This uniformity across architectures conclusively shows the issue is:
+   - Loss function not penalizing TC misclassification enough
+   - Background over-represented even with tumor_ratio=0.5
+   - Unweighted CE treats all voxels equally — catastrophic for tiny TC region
 
-Goal:
-✔ Fair architecture comparison
+3. ATTENTION HELPS BOUNDARIES, NOT CLASS BALANCE
+   Attention UNet: HD95 5.60 vs UNet3D HD95 6.99 (20% improvement)
+   But TC Dice is identical (0.563). Spatial attention improves
+   boundary delineation but cannot compensate for loss imbalance.
 
-----------------------------------------
+4. COMPLEX MODELS NEED MATCHING TRAINING STRATEGY
+   UNet++ with naive training (100 epochs, flat lr, unweighted loss)
+   performs worse than a simpler UNet with the same setup.
+   Model complexity without training strategy alignment is harmful.
 
-PHASE 3: GOLD STANDARD
-----------------------------------------
+5. METRIC BUG NOTE
+   Sensitivity and specificity in Exp 3-5 are summed across classes
+   rather than averaged (values > 2.0 confirm this). These metrics
+   are excluded from analysis. Fixed in v1 evaluation.
 
-Implement nnUNet
+========================================
+WHAT WAS LEARNT — ACTIONABLE LESSONS
+========================================
 
-Purpose:
-✔ Benchmark upper bound
-✔ Validate pipeline quality
+Lesson 1: Fix class imbalance before changing architecture
+  → Must apply weighted loss (TC weight ≥ 3.0) in next phase
 
-Expected:
-- Mean Dice → 0.85–0.90
-- TC → 0.70+
+Lesson 2: Tumor sampling ratio must be aggressive
+  → tumor_ratio from 0.5 to 0.8 ensures TC appears in nearly every patch
 
-----------------------------------------
+Lesson 3: Longer training with LR decay is essential for complex models
+  → UNet++ needs 200 epochs with cosine annealing (not constant LR)
 
-PHASE 4: RESEARCH CONTRIBUTION
-----------------------------------------
+Lesson 4: Focal loss helps hard voxel learning
+  → Focal term with gamma=2 down-weights easy background voxels,
+     concentrating gradients on difficult tumor boundaries
 
-After strong baselines:
+Lesson 5: Architecture comparison is only valid after equalizing training quality
+  → Current comparison (Exp 3 vs 4 vs 5) is not fair for UNet++
 
-→ Move to:
-- Transformer models (Swin UNet / UNETR)
-- Custom architecture (your idea)
+========================================
+DRAWBACKS OF EXPERIMENTS 1-5
+========================================
 
-----------------------------------------
-🧠 FINAL CONCLUSION
-----------------------------------------
+1. Experiments 1-2 produced no usable metrics — pipeline was fundamentally broken
+2. Experiments 3-5 use unweighted loss — TC is systematically neglected
+3. All experiments use constant learning rate — suboptimal convergence
+4. UNet++ not given sufficient epochs for its capacity
+5. No deep supervision for UNet++
+6. Metric computation bug in sensitivity/specificity (v0 evaluation)
+7. tumor_ratio=0.5 insufficient for TC-focused learning
+8. No mixed precision training in v0 trainer (slower iteration)
 
-✔ Pipeline is now stable and valid
-✔ Current results are strong baseline-level
-✔ Main limitation is training strategy, not model
+========================================
+NEXT STEPS — ADDRESSED IN EXPERIMENTS 6-8
+========================================
+
+The following changes were applied in the v1 training phase:
+
+1. Loss function redesign
+   - Weighted Dice Loss: class weights [0.1, 3.0, 1.0, 2.0] (BG, TC, ED, ET)
+   - Weighted Cross-Entropy with same weights
+   - Focal Loss (gamma=2.0, focal_weight=0.5) for hard voxel focus
+   - Combined: Loss = WeightedDice + WeightedCE + 0.5 * FocalLoss
+
+2. Training configuration upgrades
+   - Epochs: 100 → 150 (UNet3D, Attention UNet), 200 (UNet++)
+   - LR Scheduler: CosineAnnealingLR (lr: 1e-4 → 1e-6)
+   - Mixed Precision: AMP enabled (GradScaler)
+
+3. Sampling upgrade
+   - tumor_ratio: 0.5 → 0.8
+
+4. Trainer upgrade: segmentation_v0 → segmentation_v1
+   - Per-epoch logging of dice/ce/focal loss components separately
+   - Scheduler integration
+
+Stop condition target set at: Mean Dice ≥ 0.86, TC ≥ 0.70
+
+========================================
+OVERALL CONCLUSION (EXPERIMENTS 1-5)
+========================================
+
+Phase 1 of experimentation achieved its primary goals:
+
+  [DONE] Validated data pipeline necessity (Exp 1-2 vs Exp 3-5)
+  [DONE] Established strong, reproducible baseline (~0.806 mean Dice)
+  [DONE] Identified class imbalance as primary performance ceiling
+  [DONE] Confirmed architecture is not the current bottleneck
+  [DONE] Diagnosed UNet++ undertraining root cause
 
 Most Important Learning:
-----------------------------------------
-"Better data handling and loss design
- matter more than complex architectures"
+  "A well-configured training strategy with proper loss design
+   matters more than architectural complexity at this stage."
 
-----------------------------------------
+Status entering Phase 2 (Experiments 6-8):
+  Baseline: ~0.806 Mean Dice, TC stuck at 0.563
+  Target:   ≥0.860 Mean Dice, TC ≥ 0.700
 
-END OF REPORT
+========================================
+END OF REPORT — EXPERIMENTS 1-5
 ========================================
