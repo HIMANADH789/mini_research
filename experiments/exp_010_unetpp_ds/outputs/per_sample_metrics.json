@@ -1,0 +1,3512 @@
+[
+    {
+        "sample_idx": 0,
+        "dice_per_class": [
+            0.9992,
+            0.9187,
+            0.9692,
+            0.9512
+        ],
+        "mean_dice": 0.9596,
+        "hd95": 2.8284,
+        "sensitivity": 0.9783,
+        "specificity": 0.9987
+    },
+    {
+        "sample_idx": 1,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.8312,
+            0.8688
+        ],
+        "mean_dice": 0.9249,
+        "hd95": 1.4142,
+        "sensitivity": 0.9273,
+        "specificity": 0.9684
+    },
+    {
+        "sample_idx": 2,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.9295,
+            0.7353
+        ],
+        "mean_dice": 0.916,
+        "hd95": 2.2361,
+        "sensitivity": 0.9721,
+        "specificity": 0.9895
+    },
+    {
+        "sample_idx": 3,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9221,
+            0.933
+        ],
+        "mean_dice": 0.9637,
+        "hd95": 1.4142,
+        "sensitivity": 0.9622,
+        "specificity": 0.9844
+    },
+    {
+        "sample_idx": 4,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.8505,
+            0.0766
+        ],
+        "mean_dice": 0.7316,
+        "hd95": 8.6603,
+        "sensitivity": 0.8666,
+        "specificity": 0.9585
+    },
+    {
+        "sample_idx": 5,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.8702,
+            0.8923
+        ],
+        "mean_dice": 0.9405,
+        "hd95": 2.0,
+        "sensitivity": 0.9466,
+        "specificity": 0.9909
+    },
+    {
+        "sample_idx": 6,
+        "dice_per_class": [
+            0.9993,
+            1.0,
+            0.4979,
+            0.835
+        ],
+        "mean_dice": 0.833,
+        "hd95": 36.6613,
+        "sensitivity": 0.831,
+        "specificity": 0.8394
+    },
+    {
+        "sample_idx": 7,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.9124,
+            0.8589
+        ],
+        "mean_dice": 0.9427,
+        "hd95": 2.2361,
+        "sensitivity": 0.9211,
+        "specificity": 0.9749
+    },
+    {
+        "sample_idx": 8,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9573,
+            0.9575
+        ],
+        "mean_dice": 0.9786,
+        "hd95": 1.4142,
+        "sensitivity": 0.9888,
+        "specificity": 0.999
+    },
+    {
+        "sample_idx": 9,
+        "dice_per_class": [
+            0.9995,
+            0.8945,
+            0.956,
+            0.9391
+        ],
+        "mean_dice": 0.9473,
+        "hd95": 2.2361,
+        "sensitivity": 0.94,
+        "specificity": 0.9964
+    },
+    {
+        "sample_idx": 10,
+        "dice_per_class": [
+            0.9994,
+            0.9311,
+            0.9484,
+            0.9232
+        ],
+        "mean_dice": 0.9505,
+        "hd95": 2.2361,
+        "sensitivity": 0.9532,
+        "specificity": 0.9892
+    },
+    {
+        "sample_idx": 11,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.5199,
+            0.741
+        ],
+        "mean_dice": 0.8151,
+        "hd95": 1.4142,
+        "sensitivity": 0.8682,
+        "specificity": 0.971
+    },
+    {
+        "sample_idx": 12,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.8113,
+            0.7326
+        ],
+        "mean_dice": 0.8859,
+        "hd95": 1.4142,
+        "sensitivity": 0.941,
+        "specificity": 0.9821
+    },
+    {
+        "sample_idx": 13,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.8937,
+            0.9808
+        ],
+        "mean_dice": 0.9685,
+        "hd95": 2.4495,
+        "sensitivity": 0.9746,
+        "specificity": 0.9977
+    },
+    {
+        "sample_idx": 14,
+        "dice_per_class": [
+            0.9993,
+            0.962,
+            0.8854,
+            0.915
+        ],
+        "mean_dice": 0.9404,
+        "hd95": 1.7321,
+        "sensitivity": 0.9505,
+        "specificity": 0.9822
+    },
+    {
+        "sample_idx": 15,
+        "dice_per_class": [
+            0.999,
+            0.1121,
+            0.9355,
+            0.8956
+        ],
+        "mean_dice": 0.7355,
+        "hd95": 2.2361,
+        "sensitivity": 0.723,
+        "specificity": 0.9932
+    },
+    {
+        "sample_idx": 16,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9634,
+            0.9405
+        ],
+        "mean_dice": 0.9759,
+        "hd95": 2.0,
+        "sensitivity": 0.991,
+        "specificity": 0.9988
+    },
+    {
+        "sample_idx": 17,
+        "dice_per_class": [
+            0.9994,
+            0.8915,
+            0.9582,
+            0.9359
+        ],
+        "mean_dice": 0.9463,
+        "hd95": 2.2361,
+        "sensitivity": 0.9348,
+        "specificity": 0.9919
+    },
+    {
+        "sample_idx": 18,
+        "dice_per_class": [
+            0.9998,
+            0.9741,
+            0.9697,
+            0.9672
+        ],
+        "mean_dice": 0.9777,
+        "hd95": 1.7321,
+        "sensitivity": 0.9865,
+        "specificity": 0.9987
+    },
+    {
+        "sample_idx": 19,
+        "dice_per_class": [
+            0.9988,
+            0.8236,
+            0.9283,
+            0.9544
+        ],
+        "mean_dice": 0.9263,
+        "hd95": 2.4495,
+        "sensitivity": 0.9235,
+        "specificity": 0.9975
+    },
+    {
+        "sample_idx": 20,
+        "dice_per_class": [
+            0.9992,
+            0.9108,
+            0.9612,
+            0.9292
+        ],
+        "mean_dice": 0.9501,
+        "hd95": 2.2361,
+        "sensitivity": 0.9538,
+        "specificity": 0.9926
+    },
+    {
+        "sample_idx": 21,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9107,
+            0.845
+        ],
+        "mean_dice": 0.9389,
+        "hd95": 1.4142,
+        "sensitivity": 0.9682,
+        "specificity": 0.9884
+    },
+    {
+        "sample_idx": 22,
+        "dice_per_class": [
+            0.9993,
+            0.7536,
+            0.8765,
+            0.9287
+        ],
+        "mean_dice": 0.8895,
+        "hd95": 2.2361,
+        "sensitivity": 0.8874,
+        "specificity": 0.9897
+    },
+    {
+        "sample_idx": 23,
+        "dice_per_class": [
+            0.9976,
+            1.0,
+            0.8616,
+            0.7561
+        ],
+        "mean_dice": 0.9038,
+        "hd95": 8.3096,
+        "sensitivity": 0.8954,
+        "specificity": 0.9384
+    },
+    {
+        "sample_idx": 24,
+        "dice_per_class": [
+            0.9988,
+            0.7107,
+            0.9526,
+            0.6659
+        ],
+        "mean_dice": 0.832,
+        "hd95": 2.4495,
+        "sensitivity": 0.7762,
+        "specificity": 0.9933
+    },
+    {
+        "sample_idx": 25,
+        "dice_per_class": [
+            0.9995,
+            0.8445,
+            0.9117,
+            0.8722
+        ],
+        "mean_dice": 0.907,
+        "hd95": 1.7321,
+        "sensitivity": 0.8993,
+        "specificity": 0.9879
+    },
+    {
+        "sample_idx": 26,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.8984,
+            0.977
+        ],
+        "mean_dice": 0.9687,
+        "hd95": 2.2361,
+        "sensitivity": 0.9562,
+        "specificity": 0.9781
+    },
+    {
+        "sample_idx": 27,
+        "dice_per_class": [
+            0.9988,
+            0.7163,
+            0.9195,
+            0.9304
+        ],
+        "mean_dice": 0.8913,
+        "hd95": 2.4495,
+        "sensitivity": 0.9489,
+        "specificity": 0.9945
+    },
+    {
+        "sample_idx": 28,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.8922,
+            0.926
+        ],
+        "mean_dice": 0.9545,
+        "hd95": 1.0,
+        "sensitivity": 0.9541,
+        "specificity": 0.9776
+    },
+    {
+        "sample_idx": 29,
+        "dice_per_class": [
+            0.9998,
+            0.5917,
+            0.957,
+            0.8756
+        ],
+        "mean_dice": 0.856,
+        "hd95": 1.4142,
+        "sensitivity": 0.8404,
+        "specificity": 0.9952
+    },
+    {
+        "sample_idx": 30,
+        "dice_per_class": [
+            0.9993,
+            1.0,
+            0.8777,
+            0.9399
+        ],
+        "mean_dice": 0.9542,
+        "hd95": 1.7321,
+        "sensitivity": 0.9824,
+        "specificity": 0.9911
+    },
+    {
+        "sample_idx": 31,
+        "dice_per_class": [
+            0.9994,
+            0.0909,
+            0.9169,
+            0.2671
+        ],
+        "mean_dice": 0.5686,
+        "hd95": 1.7321,
+        "sensitivity": 0.6468,
+        "specificity": 0.996
+    },
+    {
+        "sample_idx": 32,
+        "dice_per_class": [
+            0.9986,
+            1.0,
+            0.9067,
+            0.8286
+        ],
+        "mean_dice": 0.9335,
+        "hd95": 2.2361,
+        "sensitivity": 0.9625,
+        "specificity": 0.9852
+    },
+    {
+        "sample_idx": 33,
+        "dice_per_class": [
+            0.9995,
+            0.0,
+            0.9517,
+            0.647
+        ],
+        "mean_dice": 0.6495,
+        "hd95": 2.2361,
+        "sensitivity": 0.9699,
+        "specificity": 0.9975
+    },
+    {
+        "sample_idx": 34,
+        "dice_per_class": [
+            0.9996,
+            0.9534,
+            0.9591,
+            0.9425
+        ],
+        "mean_dice": 0.9637,
+        "hd95": 1.7321,
+        "sensitivity": 0.9744,
+        "specificity": 0.9979
+    },
+    {
+        "sample_idx": 35,
+        "dice_per_class": [
+            0.9976,
+            0.8845,
+            0.8643,
+            0.9085
+        ],
+        "mean_dice": 0.9137,
+        "hd95": 2.4495,
+        "sensitivity": 0.9298,
+        "specificity": 0.9911
+    },
+    {
+        "sample_idx": 36,
+        "dice_per_class": [
+            0.9985,
+            0.8006,
+            0.8267,
+            0.9276
+        ],
+        "mean_dice": 0.8883,
+        "hd95": 3.0,
+        "sensitivity": 0.8988,
+        "specificity": 0.9931
+    },
+    {
+        "sample_idx": 37,
+        "dice_per_class": [
+            0.9976,
+            1.0,
+            0.9259,
+            0.8851
+        ],
+        "mean_dice": 0.9522,
+        "hd95": 3.0,
+        "sensitivity": 0.9699,
+        "specificity": 0.9965
+    },
+    {
+        "sample_idx": 38,
+        "dice_per_class": [
+            0.9991,
+            1.0,
+            0.944,
+            0.835
+        ],
+        "mean_dice": 0.9445,
+        "hd95": 2.2361,
+        "sensitivity": 0.9534,
+        "specificity": 0.9878
+    },
+    {
+        "sample_idx": 39,
+        "dice_per_class": [
+            0.9991,
+            1.0,
+            0.8676,
+            0.9556
+        ],
+        "mean_dice": 0.9556,
+        "hd95": 2.2361,
+        "sensitivity": 0.9663,
+        "specificity": 0.9882
+    },
+    {
+        "sample_idx": 40,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.917,
+            0.9653
+        ],
+        "mean_dice": 0.9705,
+        "hd95": 1.7321,
+        "sensitivity": 0.9634,
+        "specificity": 0.9793
+    },
+    {
+        "sample_idx": 41,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.8903,
+            0.8758
+        ],
+        "mean_dice": 0.9414,
+        "hd95": 1.4142,
+        "sensitivity": 0.9048,
+        "specificity": 0.9543
+    },
+    {
+        "sample_idx": 42,
+        "dice_per_class": [
+            0.9989,
+            0.7077,
+            0.9445,
+            0.9212
+        ],
+        "mean_dice": 0.8931,
+        "hd95": 2.4495,
+        "sensitivity": 0.8642,
+        "specificity": 0.9962
+    },
+    {
+        "sample_idx": 43,
+        "dice_per_class": [
+            0.9999,
+            0.9434,
+            0.9429,
+            0.9467
+        ],
+        "mean_dice": 0.9582,
+        "hd95": 1.0,
+        "sensitivity": 0.9636,
+        "specificity": 0.9867
+    },
+    {
+        "sample_idx": 44,
+        "dice_per_class": [
+            0.9975,
+            0.9014,
+            0.7971,
+            0.8513
+        ],
+        "mean_dice": 0.8868,
+        "hd95": 3.1623,
+        "sensitivity": 0.8906,
+        "specificity": 0.9659
+    },
+    {
+        "sample_idx": 45,
+        "dice_per_class": [
+            0.9992,
+            0.917,
+            0.9457,
+            0.9501
+        ],
+        "mean_dice": 0.953,
+        "hd95": 2.2361,
+        "sensitivity": 0.9662,
+        "specificity": 0.9978
+    },
+    {
+        "sample_idx": 46,
+        "dice_per_class": [
+            0.9995,
+            0.9732,
+            0.9461,
+            0.962
+        ],
+        "mean_dice": 0.9702,
+        "hd95": 2.0,
+        "sensitivity": 0.9828,
+        "specificity": 0.9975
+    },
+    {
+        "sample_idx": 47,
+        "dice_per_class": [
+            0.9996,
+            0.7248,
+            0.9724,
+            0.9355
+        ],
+        "mean_dice": 0.908,
+        "hd95": 2.2361,
+        "sensitivity": 0.9617,
+        "specificity": 0.9988
+    },
+    {
+        "sample_idx": 48,
+        "dice_per_class": [
+            0.9969,
+            1.0,
+            0.8405,
+            0.8729
+        ],
+        "mean_dice": 0.9276,
+        "hd95": 5.3852,
+        "sensitivity": 0.9826,
+        "specificity": 0.9927
+    },
+    {
+        "sample_idx": 49,
+        "dice_per_class": [
+            0.9998,
+            0.0,
+            0.8435,
+            0.7711
+        ],
+        "mean_dice": 0.6536,
+        "hd95": 1.0,
+        "sensitivity": 0.927,
+        "specificity": 0.9803
+    },
+    {
+        "sample_idx": 50,
+        "dice_per_class": [
+            0.9992,
+            0.6882,
+            0.9263,
+            0.8902
+        ],
+        "mean_dice": 0.8759,
+        "hd95": 2.4495,
+        "sensitivity": 0.874,
+        "specificity": 0.9958
+    },
+    {
+        "sample_idx": 51,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.8955,
+            0.944
+        ],
+        "mean_dice": 0.9598,
+        "hd95": 1.4142,
+        "sensitivity": 0.9503,
+        "specificity": 0.9821
+    },
+    {
+        "sample_idx": 52,
+        "dice_per_class": [
+            0.9989,
+            0.5815,
+            0.9127,
+            0.9007
+        ],
+        "mean_dice": 0.8485,
+        "hd95": 2.4495,
+        "sensitivity": 0.8113,
+        "specificity": 0.9893
+    },
+    {
+        "sample_idx": 53,
+        "dice_per_class": [
+            0.9982,
+            0.0351,
+            0.8336,
+            0.8744
+        ],
+        "mean_dice": 0.6853,
+        "hd95": 5.2056,
+        "sensitivity": 0.7026,
+        "specificity": 0.9822
+    },
+    {
+        "sample_idx": 54,
+        "dice_per_class": [
+            0.9991,
+            1.0,
+            0.9098,
+            0.8807
+        ],
+        "mean_dice": 0.9474,
+        "hd95": 2.2361,
+        "sensitivity": 0.962,
+        "specificity": 0.9847
+    },
+    {
+        "sample_idx": 55,
+        "dice_per_class": [
+            0.9998,
+            0.4926,
+            0.9584,
+            0.9279
+        ],
+        "mean_dice": 0.8447,
+        "hd95": 1.4142,
+        "sensitivity": 0.8116,
+        "specificity": 0.9952
+    },
+    {
+        "sample_idx": 56,
+        "dice_per_class": [
+            0.9996,
+            0.8262,
+            0.8916,
+            0.942
+        ],
+        "mean_dice": 0.9149,
+        "hd95": 2.2361,
+        "sensitivity": 0.9118,
+        "specificity": 0.9971
+    },
+    {
+        "sample_idx": 57,
+        "dice_per_class": [
+            0.9982,
+            0.0,
+            0.8551,
+            0.4929
+        ],
+        "mean_dice": 0.5866,
+        "hd95": 10.6794,
+        "sensitivity": 0.6223,
+        "specificity": 0.969
+    },
+    {
+        "sample_idx": 58,
+        "dice_per_class": [
+            0.9998,
+            0.6238,
+            0.9334,
+            0.959
+        ],
+        "mean_dice": 0.879,
+        "hd95": 1.4142,
+        "sensitivity": 0.8284,
+        "specificity": 0.994
+    },
+    {
+        "sample_idx": 59,
+        "dice_per_class": [
+            0.9998,
+            0.0,
+            0.525,
+            0.7741
+        ],
+        "mean_dice": 0.5747,
+        "hd95": 1.4142,
+        "sensitivity": 0.8595,
+        "specificity": 0.9785
+    },
+    {
+        "sample_idx": 60,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.9343,
+            0.8861
+        ],
+        "mean_dice": 0.955,
+        "hd95": 2.2361,
+        "sensitivity": 0.9876,
+        "specificity": 0.9961
+    },
+    {
+        "sample_idx": 61,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9266,
+            0.952
+        ],
+        "mean_dice": 0.9696,
+        "hd95": 1.4142,
+        "sensitivity": 0.9822,
+        "specificity": 0.9929
+    },
+    {
+        "sample_idx": 62,
+        "dice_per_class": [
+            0.9984,
+            1.0,
+            0.8936,
+            0.891
+        ],
+        "mean_dice": 0.9458,
+        "hd95": 2.8284,
+        "sensitivity": 0.9872,
+        "specificity": 0.9944
+    },
+    {
+        "sample_idx": 63,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9697,
+            0.8963
+        ],
+        "mean_dice": 0.9664,
+        "hd95": 1.7321,
+        "sensitivity": 0.9746,
+        "specificity": 0.9927
+    },
+    {
+        "sample_idx": 64,
+        "dice_per_class": [
+            0.9996,
+            0.89,
+            0.9664,
+            0.9274
+        ],
+        "mean_dice": 0.9458,
+        "hd95": 2.2361,
+        "sensitivity": 0.9369,
+        "specificity": 0.9982
+    },
+    {
+        "sample_idx": 65,
+        "dice_per_class": [
+            0.9984,
+            1.0,
+            0.9223,
+            0.9329
+        ],
+        "mean_dice": 0.9634,
+        "hd95": 2.8284,
+        "sensitivity": 0.9859,
+        "specificity": 0.9946
+    },
+    {
+        "sample_idx": 66,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9035,
+            0.8231
+        ],
+        "mean_dice": 0.9316,
+        "hd95": 2.0,
+        "sensitivity": 0.923,
+        "specificity": 0.9735
+    },
+    {
+        "sample_idx": 67,
+        "dice_per_class": [
+            1.0,
+            1.0,
+            0.881,
+            1.0
+        ],
+        "mean_dice": 0.9702,
+        "hd95": 1.0,
+        "sensitivity": 0.9631,
+        "specificity": 0.9631
+    },
+    {
+        "sample_idx": 68,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.9326,
+            0.9376
+        ],
+        "mean_dice": 0.9674,
+        "hd95": 1.7321,
+        "sensitivity": 0.9784,
+        "specificity": 0.9899
+    },
+    {
+        "sample_idx": 69,
+        "dice_per_class": [
+            0.9978,
+            0.7133,
+            0.5234,
+            0.6245
+        ],
+        "mean_dice": 0.7148,
+        "hd95": 3.1623,
+        "sensitivity": 0.6983,
+        "specificity": 0.9494
+    },
+    {
+        "sample_idx": 70,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.8603,
+            0.9389
+        ],
+        "mean_dice": 0.9497,
+        "hd95": 2.0,
+        "sensitivity": 0.9667,
+        "specificity": 0.987
+    },
+    {
+        "sample_idx": 71,
+        "dice_per_class": [
+            0.9982,
+            0.1333,
+            0.8324,
+            0.8632
+        ],
+        "mean_dice": 0.7068,
+        "hd95": 4.0,
+        "sensitivity": 0.7069,
+        "specificity": 0.9844
+    },
+    {
+        "sample_idx": 72,
+        "dice_per_class": [
+            0.9995,
+            0.6764,
+            0.9326,
+            0.9539
+        ],
+        "mean_dice": 0.8906,
+        "hd95": 2.2361,
+        "sensitivity": 0.8738,
+        "specificity": 0.9929
+    },
+    {
+        "sample_idx": 73,
+        "dice_per_class": [
+            0.9985,
+            0.9728,
+            0.9305,
+            0.9292
+        ],
+        "mean_dice": 0.9578,
+        "hd95": 2.4495,
+        "sensitivity": 0.9708,
+        "specificity": 0.9932
+    },
+    {
+        "sample_idx": 74,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.8564,
+            0.9757
+        ],
+        "mean_dice": 0.9579,
+        "hd95": 1.7321,
+        "sensitivity": 0.9668,
+        "specificity": 0.9815
+    },
+    {
+        "sample_idx": 75,
+        "dice_per_class": [
+            0.9994,
+            0.701,
+            0.9208,
+            0.874
+        ],
+        "mean_dice": 0.8738,
+        "hd95": 2.0,
+        "sensitivity": 0.864,
+        "specificity": 0.9919
+    },
+    {
+        "sample_idx": 76,
+        "dice_per_class": [
+            0.9997,
+            0.9347,
+            0.9369,
+            0.9425
+        ],
+        "mean_dice": 0.9534,
+        "hd95": 1.4142,
+        "sensitivity": 0.9503,
+        "specificity": 0.9818
+    },
+    {
+        "sample_idx": 77,
+        "dice_per_class": [
+            0.9998,
+            0.0,
+            0.8849,
+            0.9521
+        ],
+        "mean_dice": 0.7092,
+        "hd95": 1.4142,
+        "sensitivity": 0.9699,
+        "specificity": 0.9874
+    },
+    {
+        "sample_idx": 78,
+        "dice_per_class": [
+            0.9988,
+            1.0,
+            0.871,
+            0.9276
+        ],
+        "mean_dice": 0.9494,
+        "hd95": 2.4495,
+        "sensitivity": 0.9786,
+        "specificity": 0.9943
+    },
+    {
+        "sample_idx": 79,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9383,
+            0.9508
+        ],
+        "mean_dice": 0.9722,
+        "hd95": 1.7321,
+        "sensitivity": 0.9827,
+        "specificity": 0.9935
+    },
+    {
+        "sample_idx": 80,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.8583,
+            0.9653
+        ],
+        "mean_dice": 0.9558,
+        "hd95": 2.2361,
+        "sensitivity": 0.9384,
+        "specificity": 0.9558
+    },
+    {
+        "sample_idx": 81,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9534,
+            0.903
+        ],
+        "mean_dice": 0.9641,
+        "hd95": 1.4142,
+        "sensitivity": 0.9874,
+        "specificity": 0.996
+    },
+    {
+        "sample_idx": 82,
+        "dice_per_class": [
+            0.9996,
+            0.0,
+            0.8499,
+            0.9198
+        ],
+        "mean_dice": 0.6923,
+        "hd95": 1.4142,
+        "sensitivity": 0.7039,
+        "specificity": 0.9806
+    },
+    {
+        "sample_idx": 83,
+        "dice_per_class": [
+            0.9986,
+            0.6175,
+            0.857,
+            0.9
+        ],
+        "mean_dice": 0.8433,
+        "hd95": 2.4495,
+        "sensitivity": 0.8392,
+        "specificity": 0.991
+    },
+    {
+        "sample_idx": 84,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9036,
+            0.969
+        ],
+        "mean_dice": 0.9681,
+        "hd95": 1.4142,
+        "sensitivity": 0.9779,
+        "specificity": 0.9925
+    },
+    {
+        "sample_idx": 85,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.954,
+            0.0
+        ],
+        "mean_dice": 0.7385,
+        "hd95": 1.4142,
+        "sensitivity": 0.986,
+        "specificity": 0.9878
+    },
+    {
+        "sample_idx": 86,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.918,
+            0.8417
+        ],
+        "mean_dice": 0.9398,
+        "hd95": 3.6056,
+        "sensitivity": 0.9188,
+        "specificity": 0.9656
+    },
+    {
+        "sample_idx": 87,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9467,
+            0.9304
+        ],
+        "mean_dice": 0.9692,
+        "hd95": 1.7321,
+        "sensitivity": 0.9938,
+        "specificity": 0.9957
+    },
+    {
+        "sample_idx": 88,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9524,
+            0.9325
+        ],
+        "mean_dice": 0.9711,
+        "hd95": 1.7321,
+        "sensitivity": 0.9735,
+        "specificity": 0.985
+    },
+    {
+        "sample_idx": 89,
+        "dice_per_class": [
+            0.9988,
+            1.0,
+            0.8635,
+            0.9047
+        ],
+        "mean_dice": 0.9417,
+        "hd95": 2.2361,
+        "sensitivity": 0.9563,
+        "specificity": 0.9804
+    },
+    {
+        "sample_idx": 90,
+        "dice_per_class": [
+            0.9992,
+            1.0,
+            0.881,
+            0.9253
+        ],
+        "mean_dice": 0.9514,
+        "hd95": 1.7321,
+        "sensitivity": 0.9682,
+        "specificity": 0.9878
+    },
+    {
+        "sample_idx": 91,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9451,
+            0.88
+        ],
+        "mean_dice": 0.9562,
+        "hd95": 1.7321,
+        "sensitivity": 0.9718,
+        "specificity": 0.9907
+    },
+    {
+        "sample_idx": 92,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.963,
+            0.9753
+        ],
+        "mean_dice": 0.9845,
+        "hd95": 1.7321,
+        "sensitivity": 0.9899,
+        "specificity": 0.9962
+    },
+    {
+        "sample_idx": 93,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9363,
+            0.824
+        ],
+        "mean_dice": 0.94,
+        "hd95": 1.7321,
+        "sensitivity": 0.975,
+        "specificity": 0.988
+    },
+    {
+        "sample_idx": 94,
+        "dice_per_class": [
+            0.9984,
+            1.0,
+            0.9442,
+            0.8128
+        ],
+        "mean_dice": 0.9389,
+        "hd95": 5.099,
+        "sensitivity": 0.9166,
+        "specificity": 0.9705
+    },
+    {
+        "sample_idx": 95,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9528,
+            0.6762
+        ],
+        "mean_dice": 0.9072,
+        "hd95": 1.7321,
+        "sensitivity": 0.9314,
+        "specificity": 0.9954
+    },
+    {
+        "sample_idx": 96,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.8156,
+            0.9528
+        ],
+        "mean_dice": 0.942,
+        "hd95": 2.4495,
+        "sensitivity": 0.9644,
+        "specificity": 0.9856
+    },
+    {
+        "sample_idx": 97,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9336,
+            0.961
+        ],
+        "mean_dice": 0.9736,
+        "hd95": 1.0,
+        "sensitivity": 0.975,
+        "specificity": 0.9957
+    },
+    {
+        "sample_idx": 98,
+        "dice_per_class": [
+            0.9988,
+            0.6969,
+            0.9103,
+            0.9384
+        ],
+        "mean_dice": 0.8861,
+        "hd95": 2.8284,
+        "sensitivity": 0.8871,
+        "specificity": 0.9975
+    },
+    {
+        "sample_idx": 99,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9757,
+            0.9814
+        ],
+        "mean_dice": 0.9892,
+        "hd95": 1.4142,
+        "sensitivity": 0.9936,
+        "specificity": 0.9975
+    },
+    {
+        "sample_idx": 100,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9539,
+            0.8854
+        ],
+        "mean_dice": 0.9598,
+        "hd95": 1.0,
+        "sensitivity": 0.9294,
+        "specificity": 0.9745
+    },
+    {
+        "sample_idx": 101,
+        "dice_per_class": [
+            0.9996,
+            0.8713,
+            0.8842,
+            0.957
+        ],
+        "mean_dice": 0.928,
+        "hd95": 1.7321,
+        "sensitivity": 0.9129,
+        "specificity": 0.9872
+    },
+    {
+        "sample_idx": 102,
+        "dice_per_class": [
+            0.999,
+            1.0,
+            0.9312,
+            0.8092
+        ],
+        "mean_dice": 0.9348,
+        "hd95": 2.2361,
+        "sensitivity": 0.953,
+        "specificity": 0.9933
+    },
+    {
+        "sample_idx": 103,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9251,
+            0.9816
+        ],
+        "mean_dice": 0.9766,
+        "hd95": 1.7321,
+        "sensitivity": 0.9827,
+        "specificity": 0.9936
+    },
+    {
+        "sample_idx": 104,
+        "dice_per_class": [
+            0.9982,
+            0.6284,
+            0.9089,
+            0.8722
+        ],
+        "mean_dice": 0.8519,
+        "hd95": 2.4495,
+        "sensitivity": 0.944,
+        "specificity": 0.9961
+    },
+    {
+        "sample_idx": 105,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9219,
+            0.8632
+        ],
+        "mean_dice": 0.9462,
+        "hd95": 1.4142,
+        "sensitivity": 0.9519,
+        "specificity": 0.9799
+    },
+    {
+        "sample_idx": 106,
+        "dice_per_class": [
+            0.9996,
+            0.9241,
+            0.785,
+            0.9709
+        ],
+        "mean_dice": 0.9199,
+        "hd95": 1.7321,
+        "sensitivity": 0.86,
+        "specificity": 0.9867
+    },
+    {
+        "sample_idx": 107,
+        "dice_per_class": [
+            0.9995,
+            0.7207,
+            0.9341,
+            0.9402
+        ],
+        "mean_dice": 0.8986,
+        "hd95": 2.0,
+        "sensitivity": 0.8762,
+        "specificity": 0.9851
+    },
+    {
+        "sample_idx": 108,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9674,
+            0.9774
+        ],
+        "mean_dice": 0.9862,
+        "hd95": 1.7321,
+        "sensitivity": 0.9948,
+        "specificity": 0.9987
+    },
+    {
+        "sample_idx": 109,
+        "dice_per_class": [
+            0.9992,
+            0.8201,
+            0.9587,
+            0.9626
+        ],
+        "mean_dice": 0.9352,
+        "hd95": 2.4495,
+        "sensitivity": 0.9735,
+        "specificity": 0.9991
+    },
+    {
+        "sample_idx": 110,
+        "dice_per_class": [
+            0.9993,
+            0.9599,
+            0.9634,
+            0.9312
+        ],
+        "mean_dice": 0.9635,
+        "hd95": 2.2361,
+        "sensitivity": 0.9713,
+        "specificity": 0.9978
+    },
+    {
+        "sample_idx": 111,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.8877,
+            0.9336
+        ],
+        "mean_dice": 0.9551,
+        "hd95": 1.7321,
+        "sensitivity": 0.9853,
+        "specificity": 0.993
+    },
+    {
+        "sample_idx": 112,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.8869,
+            0.4694
+        ],
+        "mean_dice": 0.839,
+        "hd95": 4.4721,
+        "sensitivity": 0.8195,
+        "specificity": 0.9754
+    },
+    {
+        "sample_idx": 113,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.7037,
+            0.905
+        ],
+        "mean_dice": 0.9021,
+        "hd95": 7.2801,
+        "sensitivity": 0.8489,
+        "specificity": 0.9041
+    },
+    {
+        "sample_idx": 114,
+        "dice_per_class": [
+            0.9987,
+            0.8384,
+            0.9527,
+            0.9636
+        ],
+        "mean_dice": 0.9384,
+        "hd95": 2.4495,
+        "sensitivity": 0.9571,
+        "specificity": 0.999
+    },
+    {
+        "sample_idx": 115,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9431,
+            0.9661
+        ],
+        "mean_dice": 0.9773,
+        "hd95": 1.0,
+        "sensitivity": 0.9807,
+        "specificity": 0.991
+    },
+    {
+        "sample_idx": 116,
+        "dice_per_class": [
+            0.9994,
+            0.5253,
+            0.9303,
+            0.9472
+        ],
+        "mean_dice": 0.8505,
+        "hd95": 2.2361,
+        "sensitivity": 0.7318,
+        "specificity": 0.9942
+    },
+    {
+        "sample_idx": 117,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.8505,
+            0.973
+        ],
+        "mean_dice": 0.9558,
+        "hd95": 1.7321,
+        "sensitivity": 0.9397,
+        "specificity": 0.9862
+    },
+    {
+        "sample_idx": 118,
+        "dice_per_class": [
+            0.9999,
+            0.964,
+            0.9682,
+            0.9394
+        ],
+        "mean_dice": 0.9679,
+        "hd95": 1.4142,
+        "sensitivity": 0.9771,
+        "specificity": 0.9967
+    },
+    {
+        "sample_idx": 119,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.972,
+            0.9349
+        ],
+        "mean_dice": 0.9767,
+        "hd95": 1.4142,
+        "sensitivity": 0.9851,
+        "specificity": 0.9937
+    },
+    {
+        "sample_idx": 120,
+        "dice_per_class": [
+            0.9994,
+            0.9094,
+            0.9439,
+            0.9028
+        ],
+        "mean_dice": 0.9389,
+        "hd95": 2.0,
+        "sensitivity": 0.9537,
+        "specificity": 0.9968
+    },
+    {
+        "sample_idx": 121,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9102,
+            0.9239
+        ],
+        "mean_dice": 0.9584,
+        "hd95": 1.4142,
+        "sensitivity": 0.9507,
+        "specificity": 0.9827
+    },
+    {
+        "sample_idx": 122,
+        "dice_per_class": [
+            0.9979,
+            0.8618,
+            0.8781,
+            0.9359
+        ],
+        "mean_dice": 0.9185,
+        "hd95": 3.0,
+        "sensitivity": 0.9425,
+        "specificity": 0.9955
+    },
+    {
+        "sample_idx": 123,
+        "dice_per_class": [
+            0.9992,
+            0.4261,
+            0.9221,
+            0.9168
+        ],
+        "mean_dice": 0.8161,
+        "hd95": 2.2361,
+        "sensitivity": 0.7297,
+        "specificity": 0.9954
+    },
+    {
+        "sample_idx": 124,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.8518,
+            0.9829
+        ],
+        "mean_dice": 0.9586,
+        "hd95": 1.4142,
+        "sensitivity": 0.9414,
+        "specificity": 0.989
+    },
+    {
+        "sample_idx": 125,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.9611,
+            0.9459
+        ],
+        "mean_dice": 0.9766,
+        "hd95": 2.2361,
+        "sensitivity": 0.9911,
+        "specificity": 0.9981
+    },
+    {
+        "sample_idx": 126,
+        "dice_per_class": [
+            0.9989,
+            0.0896,
+            0.9576,
+            0.8228
+        ],
+        "mean_dice": 0.7172,
+        "hd95": 2.4495,
+        "sensitivity": 0.7482,
+        "specificity": 0.996
+    },
+    {
+        "sample_idx": 127,
+        "dice_per_class": [
+            0.999,
+            1.0,
+            0.9026,
+            0.9505
+        ],
+        "mean_dice": 0.963,
+        "hd95": 2.2361,
+        "sensitivity": 0.9772,
+        "specificity": 0.9825
+    },
+    {
+        "sample_idx": 128,
+        "dice_per_class": [
+            0.9971,
+            0.0031,
+            0.8778,
+            0.8684
+        ],
+        "mean_dice": 0.6866,
+        "hd95": 33.5276,
+        "sensitivity": 0.729,
+        "specificity": 0.996
+    },
+    {
+        "sample_idx": 129,
+        "dice_per_class": [
+            0.9999,
+            0.9362,
+            0.9634,
+            0.951
+        ],
+        "mean_dice": 0.9626,
+        "hd95": 1.4142,
+        "sensitivity": 0.7316,
+        "specificity": 0.997
+    },
+    {
+        "sample_idx": 130,
+        "dice_per_class": [
+            0.9996,
+            0.0,
+            0.8407,
+            0.8293
+        ],
+        "mean_dice": 0.6674,
+        "hd95": 2.2361,
+        "sensitivity": 0.6681,
+        "specificity": 0.9707
+    },
+    {
+        "sample_idx": 131,
+        "dice_per_class": [
+            0.9973,
+            0.9197,
+            0.8924,
+            0.8103
+        ],
+        "mean_dice": 0.9049,
+        "hd95": 9.4868,
+        "sensitivity": 0.8597,
+        "specificity": 0.956
+    },
+    {
+        "sample_idx": 132,
+        "dice_per_class": [
+            0.999,
+            1.0,
+            0.53,
+            0.9783
+        ],
+        "mean_dice": 0.8768,
+        "hd95": 16.4027,
+        "sensitivity": 0.9641,
+        "specificity": 0.9964
+    },
+    {
+        "sample_idx": 133,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.901,
+            0.9284
+        ],
+        "mean_dice": 0.9572,
+        "hd95": 2.2361,
+        "sensitivity": 0.9784,
+        "specificity": 0.998
+    },
+    {
+        "sample_idx": 134,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.841,
+            0.8847
+        ],
+        "mean_dice": 0.9313,
+        "hd95": 2.0,
+        "sensitivity": 0.9506,
+        "specificity": 0.9958
+    },
+    {
+        "sample_idx": 135,
+        "dice_per_class": [
+            0.9999,
+            0.4663,
+            0.9693,
+            0.8712
+        ],
+        "mean_dice": 0.8267,
+        "hd95": 1.4142,
+        "sensitivity": 0.8168,
+        "specificity": 0.9988
+    },
+    {
+        "sample_idx": 136,
+        "dice_per_class": [
+            0.999,
+            0.0,
+            0.9506,
+            0.6703
+        ],
+        "mean_dice": 0.655,
+        "hd95": 3.1623,
+        "sensitivity": 0.7217,
+        "specificity": 0.991
+    },
+    {
+        "sample_idx": 137,
+        "dice_per_class": [
+            0.9989,
+            0.0,
+            0.8788,
+            0.904
+        ],
+        "mean_dice": 0.6954,
+        "hd95": 2.4495,
+        "sensitivity": 0.9506,
+        "specificity": 0.9788
+    },
+    {
+        "sample_idx": 138,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.8863,
+            0.8562
+        ],
+        "mean_dice": 0.9356,
+        "hd95": 49.5182,
+        "sensitivity": 0.9184,
+        "specificity": 0.9782
+    },
+    {
+        "sample_idx": 139,
+        "dice_per_class": [
+            0.9984,
+            0.8371,
+            0.8937,
+            0.9491
+        ],
+        "mean_dice": 0.9196,
+        "hd95": 3.0,
+        "sensitivity": 0.9646,
+        "specificity": 0.994
+    },
+    {
+        "sample_idx": 140,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.932,
+            0.8602
+        ],
+        "mean_dice": 0.948,
+        "hd95": 1.4142,
+        "sensitivity": 0.9662,
+        "specificity": 0.992
+    },
+    {
+        "sample_idx": 141,
+        "dice_per_class": [
+            0.9997,
+            0.0,
+            0.946,
+            0.949
+        ],
+        "mean_dice": 0.7237,
+        "hd95": 1.4142,
+        "sensitivity": 0.9856,
+        "specificity": 0.9953
+    },
+    {
+        "sample_idx": 142,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.8339,
+            0.9655
+        ],
+        "mean_dice": 0.9498,
+        "hd95": 1.4142,
+        "sensitivity": 0.964,
+        "specificity": 0.9877
+    },
+    {
+        "sample_idx": 143,
+        "dice_per_class": [
+            0.9998,
+            0.0,
+            0.9471,
+            0.9251
+        ],
+        "mean_dice": 0.718,
+        "hd95": 1.4142,
+        "sensitivity": 0.982,
+        "specificity": 0.9951
+    },
+    {
+        "sample_idx": 144,
+        "dice_per_class": [
+            0.9998,
+            0.0,
+            0.909,
+            0.9527
+        ],
+        "mean_dice": 0.7154,
+        "hd95": 1.4142,
+        "sensitivity": 0.733,
+        "specificity": 0.9959
+    },
+    {
+        "sample_idx": 145,
+        "dice_per_class": [
+            1.0,
+            1.0,
+            0.9682,
+            0.982
+        ],
+        "mean_dice": 0.9875,
+        "hd95": 1.0,
+        "sensitivity": 0.9904,
+        "specificity": 0.9975
+    },
+    {
+        "sample_idx": 146,
+        "dice_per_class": [
+            0.9978,
+            0.202,
+            0.9395,
+            0.8974
+        ],
+        "mean_dice": 0.7592,
+        "hd95": 3.0,
+        "sensitivity": 0.8771,
+        "specificity": 0.9948
+    },
+    {
+        "sample_idx": 147,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.901,
+            0.9669
+        ],
+        "mean_dice": 0.9669,
+        "hd95": 2.0,
+        "sensitivity": 0.9834,
+        "specificity": 0.9898
+    },
+    {
+        "sample_idx": 148,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.7715,
+            0.8331
+        ],
+        "mean_dice": 0.901,
+        "hd95": 2.2361,
+        "sensitivity": 0.9214,
+        "specificity": 0.9845
+    },
+    {
+        "sample_idx": 149,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.9174,
+            0.7457
+        ],
+        "mean_dice": 0.9156,
+        "hd95": 1.7321,
+        "sensitivity": 0.9267,
+        "specificity": 0.9795
+    },
+    {
+        "sample_idx": 150,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9167,
+            0.9106
+        ],
+        "mean_dice": 0.9567,
+        "hd95": 1.4142,
+        "sensitivity": 0.9647,
+        "specificity": 0.9938
+    },
+    {
+        "sample_idx": 151,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9058,
+            0.8143
+        ],
+        "mean_dice": 0.93,
+        "hd95": 1.0,
+        "sensitivity": 0.9239,
+        "specificity": 0.9627
+    },
+    {
+        "sample_idx": 152,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.981,
+            1.0
+        ],
+        "mean_dice": 0.9952,
+        "hd95": 1.0,
+        "sensitivity": 0.9968,
+        "specificity": 0.9968
+    },
+    {
+        "sample_idx": 153,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9478,
+            0.8462
+        ],
+        "mean_dice": 0.9484,
+        "hd95": 1.7321,
+        "sensitivity": 0.9471,
+        "specificity": 0.9897
+    },
+    {
+        "sample_idx": 154,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.9537,
+            0.9454
+        ],
+        "mean_dice": 0.9747,
+        "hd95": 2.0,
+        "sensitivity": 0.9773,
+        "specificity": 0.9963
+    },
+    {
+        "sample_idx": 155,
+        "dice_per_class": [
+            0.998,
+            0.8773,
+            0.8524,
+            0.8763
+        ],
+        "mean_dice": 0.901,
+        "hd95": 3.0,
+        "sensitivity": 0.9407,
+        "specificity": 0.9852
+    },
+    {
+        "sample_idx": 156,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.973,
+            0.9741
+        ],
+        "mean_dice": 0.9867,
+        "hd95": 1.7321,
+        "sensitivity": 0.9926,
+        "specificity": 0.9971
+    },
+    {
+        "sample_idx": 157,
+        "dice_per_class": [
+            0.9991,
+            0.1613,
+            0.9494,
+            0.9374
+        ],
+        "mean_dice": 0.7618,
+        "hd95": 2.4495,
+        "sensitivity": 0.7343,
+        "specificity": 0.9975
+    },
+    {
+        "sample_idx": 158,
+        "dice_per_class": [
+            0.9988,
+            0.3636,
+            0.9084,
+            0.9666
+        ],
+        "mean_dice": 0.8094,
+        "hd95": 2.2467,
+        "sensitivity": 0.7432,
+        "specificity": 0.9978
+    },
+    {
+        "sample_idx": 159,
+        "dice_per_class": [
+            0.9985,
+            1.0,
+            0.8484,
+            0.9487
+        ],
+        "mean_dice": 0.9489,
+        "hd95": 2.8284,
+        "sensitivity": 0.9516,
+        "specificity": 0.9934
+    },
+    {
+        "sample_idx": 160,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.9234,
+            0.9293
+        ],
+        "mean_dice": 0.963,
+        "hd95": 2.0,
+        "sensitivity": 0.9814,
+        "specificity": 0.9946
+    },
+    {
+        "sample_idx": 161,
+        "dice_per_class": [
+            0.9969,
+            1.0,
+            0.8613,
+            0.6861
+        ],
+        "mean_dice": 0.8861,
+        "hd95": 9.6954,
+        "sensitivity": 0.8835,
+        "specificity": 0.9257
+    },
+    {
+        "sample_idx": 162,
+        "dice_per_class": [
+            0.9997,
+            0.6557,
+            0.8809,
+            0.8623
+        ],
+        "mean_dice": 0.8497,
+        "hd95": 1.4142,
+        "sensitivity": 0.6887,
+        "specificity": 0.9714
+    },
+    {
+        "sample_idx": 163,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9447,
+            0.9734
+        ],
+        "mean_dice": 0.9795,
+        "hd95": 1.7321,
+        "sensitivity": 0.9819,
+        "specificity": 0.9981
+    },
+    {
+        "sample_idx": 164,
+        "dice_per_class": [
+            0.9991,
+            1.0,
+            0.8782,
+            0.9343
+        ],
+        "mean_dice": 0.9529,
+        "hd95": 2.2361,
+        "sensitivity": 0.9469,
+        "specificity": 0.9788
+    },
+    {
+        "sample_idx": 165,
+        "dice_per_class": [
+            0.9996,
+            0.8797,
+            0.9605,
+            0.9584
+        ],
+        "mean_dice": 0.9495,
+        "hd95": 2.0,
+        "sensitivity": 0.9071,
+        "specificity": 0.9972
+    },
+    {
+        "sample_idx": 166,
+        "dice_per_class": [
+            0.9988,
+            1.0,
+            0.4405,
+            0.9755
+        ],
+        "mean_dice": 0.8537,
+        "hd95": 15.0665,
+        "sensitivity": 0.942,
+        "specificity": 0.9958
+    },
+    {
+        "sample_idx": 167,
+        "dice_per_class": [
+            0.9985,
+            1.0,
+            0.9201,
+            0.9283
+        ],
+        "mean_dice": 0.9617,
+        "hd95": 2.4495,
+        "sensitivity": 0.971,
+        "specificity": 0.9875
+    },
+    {
+        "sample_idx": 168,
+        "dice_per_class": [
+            0.9987,
+            1.0,
+            0.771,
+            0.8746
+        ],
+        "mean_dice": 0.9111,
+        "hd95": 3.7417,
+        "sensitivity": 0.9061,
+        "specificity": 0.9666
+    },
+    {
+        "sample_idx": 169,
+        "dice_per_class": [
+            0.9988,
+            0.6054,
+            0.9129,
+            0.9271
+        ],
+        "mean_dice": 0.861,
+        "hd95": 2.2361,
+        "sensitivity": 0.8295,
+        "specificity": 0.9926
+    },
+    {
+        "sample_idx": 170,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.7999,
+            0.8758
+        ],
+        "mean_dice": 0.9189,
+        "hd95": 1.0,
+        "sensitivity": 0.9472,
+        "specificity": 0.9792
+    },
+    {
+        "sample_idx": 171,
+        "dice_per_class": [
+            0.9986,
+            0.5836,
+            0.7878,
+            0.8642
+        ],
+        "mean_dice": 0.8085,
+        "hd95": 3.0,
+        "sensitivity": 0.7843,
+        "specificity": 0.9825
+    },
+    {
+        "sample_idx": 172,
+        "dice_per_class": [
+            0.9993,
+            1.0,
+            0.8787,
+            0.7695
+        ],
+        "mean_dice": 0.9119,
+        "hd95": 1.7321,
+        "sensitivity": 0.9428,
+        "specificity": 0.9794
+    },
+    {
+        "sample_idx": 173,
+        "dice_per_class": [
+            0.9994,
+            0.7815,
+            0.8742,
+            0.9296
+        ],
+        "mean_dice": 0.8961,
+        "hd95": 2.4495,
+        "sensitivity": 0.8906,
+        "specificity": 0.9941
+    },
+    {
+        "sample_idx": 174,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.8972,
+            0.9419
+        ],
+        "mean_dice": 0.9597,
+        "hd95": 1.4142,
+        "sensitivity": 0.9772,
+        "specificity": 0.9913
+    },
+    {
+        "sample_idx": 175,
+        "dice_per_class": [
+            0.9998,
+            0.1761,
+            0.9531,
+            0.8356
+        ],
+        "mean_dice": 0.7412,
+        "hd95": 1.4142,
+        "sensitivity": 0.6884,
+        "specificity": 0.9927
+    },
+    {
+        "sample_idx": 176,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.792,
+            0.8669
+        ],
+        "mean_dice": 0.9146,
+        "hd95": 2.0,
+        "sensitivity": 0.9696,
+        "specificity": 0.9913
+    },
+    {
+        "sample_idx": 177,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9574,
+            0.9013
+        ],
+        "mean_dice": 0.9646,
+        "hd95": 1.4142,
+        "sensitivity": 0.9738,
+        "specificity": 0.9919
+    },
+    {
+        "sample_idx": 178,
+        "dice_per_class": [
+            0.9996,
+            0.6952,
+            0.9626,
+            0.953
+        ],
+        "mean_dice": 0.9026,
+        "hd95": 2.0,
+        "sensitivity": 0.8623,
+        "specificity": 0.9966
+    },
+    {
+        "sample_idx": 179,
+        "dice_per_class": [
+            0.9985,
+            0.4729,
+            0.9031,
+            0.8789
+        ],
+        "mean_dice": 0.8133,
+        "hd95": 2.4495,
+        "sensitivity": 0.8022,
+        "specificity": 0.9926
+    },
+    {
+        "sample_idx": 180,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.9455,
+            0.9696
+        ],
+        "mean_dice": 0.9786,
+        "hd95": 2.2361,
+        "sensitivity": 0.9917,
+        "specificity": 0.9972
+    },
+    {
+        "sample_idx": 181,
+        "dice_per_class": [
+            0.9999,
+            0.0,
+            0.9268,
+            0.9638
+        ],
+        "mean_dice": 0.7226,
+        "hd95": 1.0,
+        "sensitivity": 0.9747,
+        "specificity": 0.9916
+    },
+    {
+        "sample_idx": 182,
+        "dice_per_class": [
+            0.9994,
+            1.0,
+            0.9208,
+            0.6124
+        ],
+        "mean_dice": 0.8832,
+        "hd95": 1.7321,
+        "sensitivity": 0.859,
+        "specificity": 0.9767
+    },
+    {
+        "sample_idx": 183,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9285,
+            0.6921
+        ],
+        "mean_dice": 0.905,
+        "hd95": 1.7321,
+        "sensitivity": 0.8763,
+        "specificity": 0.9805
+    },
+    {
+        "sample_idx": 184,
+        "dice_per_class": [
+            0.9993,
+            0.9695,
+            0.9291,
+            0.8973
+        ],
+        "mean_dice": 0.9488,
+        "hd95": 2.2361,
+        "sensitivity": 0.9633,
+        "specificity": 0.9944
+    },
+    {
+        "sample_idx": 185,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.8824,
+            0.9659
+        ],
+        "mean_dice": 0.962,
+        "hd95": 1.7321,
+        "sensitivity": 0.9882,
+        "specificity": 0.9955
+    },
+    {
+        "sample_idx": 186,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9042,
+            0.9447
+        ],
+        "mean_dice": 0.9622,
+        "hd95": 1.4142,
+        "sensitivity": 0.9565,
+        "specificity": 0.9836
+    },
+    {
+        "sample_idx": 187,
+        "dice_per_class": [
+            0.9998,
+            0.6105,
+            0.9513,
+            0.9332
+        ],
+        "mean_dice": 0.8737,
+        "hd95": 1.4142,
+        "sensitivity": 0.7283,
+        "specificity": 0.9918
+    },
+    {
+        "sample_idx": 188,
+        "dice_per_class": [
+            0.9994,
+            0.9677,
+            0.935,
+            0.8966
+        ],
+        "mean_dice": 0.9497,
+        "hd95": 1.7321,
+        "sensitivity": 0.9542,
+        "specificity": 0.9952
+    },
+    {
+        "sample_idx": 189,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9131,
+            0.9762
+        ],
+        "mean_dice": 0.9722,
+        "hd95": 1.7321,
+        "sensitivity": 0.9906,
+        "specificity": 0.9972
+    },
+    {
+        "sample_idx": 190,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.729,
+            0.8886
+        ],
+        "mean_dice": 0.9044,
+        "hd95": 2.8284,
+        "sensitivity": 0.9352,
+        "specificity": 0.9729
+    },
+    {
+        "sample_idx": 191,
+        "dice_per_class": [
+            0.9986,
+            0.5977,
+            0.9439,
+            0.6436
+        ],
+        "mean_dice": 0.796,
+        "hd95": 2.4495,
+        "sensitivity": 0.776,
+        "specificity": 0.9922
+    },
+    {
+        "sample_idx": 192,
+        "dice_per_class": [
+            0.9987,
+            0.0,
+            0.7693,
+            0.8339
+        ],
+        "mean_dice": 0.6505,
+        "hd95": 2.4495,
+        "sensitivity": 0.6564,
+        "specificity": 0.9653
+    },
+    {
+        "sample_idx": 193,
+        "dice_per_class": [
+            0.9981,
+            0.6247,
+            0.8372,
+            0.8829
+        ],
+        "mean_dice": 0.8357,
+        "hd95": 2.4495,
+        "sensitivity": 0.8214,
+        "specificity": 0.9748
+    },
+    {
+        "sample_idx": 194,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9257,
+            0.9315
+        ],
+        "mean_dice": 0.9642,
+        "hd95": 1.4142,
+        "sensitivity": 0.9776,
+        "specificity": 0.9958
+    },
+    {
+        "sample_idx": 195,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.8623,
+            0.957
+        ],
+        "mean_dice": 0.9548,
+        "hd95": 1.4142,
+        "sensitivity": 0.9583,
+        "specificity": 0.9794
+    },
+    {
+        "sample_idx": 196,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9609,
+            0.9443
+        ],
+        "mean_dice": 0.9762,
+        "hd95": 1.4142,
+        "sensitivity": 0.9798,
+        "specificity": 0.9953
+    },
+    {
+        "sample_idx": 197,
+        "dice_per_class": [
+            0.998,
+            0.8444,
+            0.9158,
+            0.9337
+        ],
+        "mean_dice": 0.923,
+        "hd95": 3.0,
+        "sensitivity": 0.9512,
+        "specificity": 0.9916
+    },
+    {
+        "sample_idx": 198,
+        "dice_per_class": [
+            0.9983,
+            0.85,
+            0.8887,
+            0.9049
+        ],
+        "mean_dice": 0.9105,
+        "hd95": 2.4495,
+        "sensitivity": 0.9124,
+        "specificity": 0.984
+    },
+    {
+        "sample_idx": 199,
+        "dice_per_class": [
+            0.9982,
+            0.8373,
+            0.7605,
+            0.9074
+        ],
+        "mean_dice": 0.8759,
+        "hd95": 7.0711,
+        "sensitivity": 0.8761,
+        "specificity": 0.9553
+    },
+    {
+        "sample_idx": 200,
+        "dice_per_class": [
+            0.9993,
+            1.0,
+            0.8081,
+            0.2696
+        ],
+        "mean_dice": 0.7693,
+        "hd95": 5.9161,
+        "sensitivity": 0.7759,
+        "specificity": 0.9463
+    },
+    {
+        "sample_idx": 201,
+        "dice_per_class": [
+            0.9987,
+            0.115,
+            0.8995,
+            0.9051
+        ],
+        "mean_dice": 0.7296,
+        "hd95": 2.2361,
+        "sensitivity": 0.7219,
+        "specificity": 0.9887
+    },
+    {
+        "sample_idx": 202,
+        "dice_per_class": [
+            0.9988,
+            0.9828,
+            0.9597,
+            0.9528
+        ],
+        "mean_dice": 0.9735,
+        "hd95": 2.4495,
+        "sensitivity": 0.9819,
+        "specificity": 0.9954
+    },
+    {
+        "sample_idx": 203,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9684,
+            0.9204
+        ],
+        "mean_dice": 0.9721,
+        "hd95": 2.0,
+        "sensitivity": 0.9845,
+        "specificity": 0.9962
+    },
+    {
+        "sample_idx": 204,
+        "dice_per_class": [
+            0.9993,
+            0.426,
+            0.9389,
+            0.9166
+        ],
+        "mean_dice": 0.8202,
+        "hd95": 2.2361,
+        "sensitivity": 0.768,
+        "specificity": 0.9972
+    },
+    {
+        "sample_idx": 205,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9007,
+            0.9238
+        ],
+        "mean_dice": 0.9561,
+        "hd95": 1.0,
+        "sensitivity": 0.9522,
+        "specificity": 0.9825
+    },
+    {
+        "sample_idx": 206,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9539,
+            0.968
+        ],
+        "mean_dice": 0.9804,
+        "hd95": 1.0,
+        "sensitivity": 0.9918,
+        "specificity": 0.9953
+    },
+    {
+        "sample_idx": 207,
+        "dice_per_class": [
+            0.9998,
+            0.9315,
+            0.4817,
+            0.9237
+        ],
+        "mean_dice": 0.8342,
+        "hd95": 24.3516,
+        "sensitivity": 0.7796,
+        "specificity": 0.8817
+    },
+    {
+        "sample_idx": 208,
+        "dice_per_class": [
+            0.9986,
+            0.7048,
+            0.7363,
+            0.9471
+        ],
+        "mean_dice": 0.8467,
+        "hd95": 2.4495,
+        "sensitivity": 0.7051,
+        "specificity": 0.9917
+    },
+    {
+        "sample_idx": 209,
+        "dice_per_class": [
+            0.9997,
+            0.9224,
+            0.9476,
+            0.9117
+        ],
+        "mean_dice": 0.9453,
+        "hd95": 1.4142,
+        "sensitivity": 0.9788,
+        "specificity": 0.9982
+    },
+    {
+        "sample_idx": 210,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9483,
+            0.9248
+        ],
+        "mean_dice": 0.9682,
+        "hd95": 1.7321,
+        "sensitivity": 0.9728,
+        "specificity": 0.986
+    },
+    {
+        "sample_idx": 211,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.8961,
+            0.8827
+        ],
+        "mean_dice": 0.9447,
+        "hd95": 3.0,
+        "sensitivity": 0.9327,
+        "specificity": 0.9608
+    },
+    {
+        "sample_idx": 212,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.972,
+            0.9565
+        ],
+        "mean_dice": 0.9821,
+        "hd95": 1.4142,
+        "sensitivity": 0.993,
+        "specificity": 0.997
+    },
+    {
+        "sample_idx": 213,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9277,
+            0.8356
+        ],
+        "mean_dice": 0.9408,
+        "hd95": 1.0,
+        "sensitivity": 0.9249,
+        "specificity": 0.9867
+    },
+    {
+        "sample_idx": 214,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.975,
+            0.9041
+        ],
+        "mean_dice": 0.9697,
+        "hd95": 1.7321,
+        "sensitivity": 0.9872,
+        "specificity": 0.9971
+    },
+    {
+        "sample_idx": 215,
+        "dice_per_class": [
+            0.999,
+            0.898,
+            0.91,
+            0.9265
+        ],
+        "mean_dice": 0.9334,
+        "hd95": 2.2361,
+        "sensitivity": 0.8711,
+        "specificity": 0.9964
+    },
+    {
+        "sample_idx": 216,
+        "dice_per_class": [
+            0.9986,
+            0.7601,
+            0.9289,
+            0.9154
+        ],
+        "mean_dice": 0.9008,
+        "hd95": 2.4495,
+        "sensitivity": 0.8995,
+        "specificity": 0.9988
+    },
+    {
+        "sample_idx": 217,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9082,
+            0.9093
+        ],
+        "mean_dice": 0.9543,
+        "hd95": 1.0,
+        "sensitivity": 0.9774,
+        "specificity": 0.993
+    },
+    {
+        "sample_idx": 218,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.8466,
+            0.9513
+        ],
+        "mean_dice": 0.9494,
+        "hd95": 1.0,
+        "sensitivity": 0.9545,
+        "specificity": 0.9805
+    },
+    {
+        "sample_idx": 219,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9558,
+            0.9724
+        ],
+        "mean_dice": 0.982,
+        "hd95": 1.0,
+        "sensitivity": 0.9751,
+        "specificity": 0.9877
+    },
+    {
+        "sample_idx": 220,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9273,
+            0.713
+        ],
+        "mean_dice": 0.91,
+        "hd95": 1.0,
+        "sensitivity": 0.9097,
+        "specificity": 0.9891
+    },
+    {
+        "sample_idx": 221,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.941,
+            0.9803
+        ],
+        "mean_dice": 0.9802,
+        "hd95": 2.0,
+        "sensitivity": 0.9864,
+        "specificity": 0.9954
+    },
+    {
+        "sample_idx": 222,
+        "dice_per_class": [
+            0.9999,
+            0.9794,
+            0.841,
+            0.9391
+        ],
+        "mean_dice": 0.9399,
+        "hd95": 1.0,
+        "sensitivity": 0.9337,
+        "specificity": 0.9789
+    },
+    {
+        "sample_idx": 223,
+        "dice_per_class": [
+            0.9991,
+            1.0,
+            0.9012,
+            0.9145
+        ],
+        "mean_dice": 0.9537,
+        "hd95": 2.0,
+        "sensitivity": 0.9612,
+        "specificity": 0.9833
+    },
+    {
+        "sample_idx": 224,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9328,
+            1.0
+        ],
+        "mean_dice": 0.9831,
+        "hd95": 1.4142,
+        "sensitivity": 0.9814,
+        "specificity": 0.9814
+    },
+    {
+        "sample_idx": 225,
+        "dice_per_class": [
+            0.9996,
+            0.838,
+            0.9269,
+            0.9372
+        ],
+        "mean_dice": 0.9254,
+        "hd95": 2.2361,
+        "sensitivity": 0.9305,
+        "specificity": 0.9967
+    },
+    {
+        "sample_idx": 226,
+        "dice_per_class": [
+            0.9988,
+            0.9507,
+            0.9547,
+            0.9624
+        ],
+        "mean_dice": 0.9667,
+        "hd95": 2.4495,
+        "sensitivity": 0.979,
+        "specificity": 0.9933
+    },
+    {
+        "sample_idx": 227,
+        "dice_per_class": [
+            0.9994,
+            0.5792,
+            0.9434,
+            0.9563
+        ],
+        "mean_dice": 0.8696,
+        "hd95": 2.2361,
+        "sensitivity": 0.8409,
+        "specificity": 0.993
+    },
+    {
+        "sample_idx": 228,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9647,
+            0.9391
+        ],
+        "mean_dice": 0.9759,
+        "hd95": 1.7321,
+        "sensitivity": 0.975,
+        "specificity": 0.9906
+    },
+    {
+        "sample_idx": 229,
+        "dice_per_class": [
+            0.9996,
+            0.8953,
+            0.918,
+            0.8492
+        ],
+        "mean_dice": 0.9155,
+        "hd95": 1.7321,
+        "sensitivity": 0.941,
+        "specificity": 0.9962
+    },
+    {
+        "sample_idx": 230,
+        "dice_per_class": [
+            0.9993,
+            0.689,
+            0.9435,
+            0.9715
+        ],
+        "mean_dice": 0.9008,
+        "hd95": 2.2361,
+        "sensitivity": 0.8345,
+        "specificity": 0.9917
+    },
+    {
+        "sample_idx": 231,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9668,
+            1.0
+        ],
+        "mean_dice": 0.9917,
+        "hd95": 1.0,
+        "sensitivity": 0.9954,
+        "specificity": 0.9954
+    },
+    {
+        "sample_idx": 232,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9152,
+            0.8585
+        ],
+        "mean_dice": 0.9433,
+        "hd95": 1.4142,
+        "sensitivity": 0.9722,
+        "specificity": 0.9892
+    },
+    {
+        "sample_idx": 233,
+        "dice_per_class": [
+            0.9991,
+            0.4909,
+            0.8808,
+            0.89
+        ],
+        "mean_dice": 0.8152,
+        "hd95": 2.2361,
+        "sensitivity": 0.7854,
+        "specificity": 0.9799
+    },
+    {
+        "sample_idx": 234,
+        "dice_per_class": [
+            0.9994,
+            0.9436,
+            0.8344,
+            0.9267
+        ],
+        "mean_dice": 0.926,
+        "hd95": 2.0,
+        "sensitivity": 0.9477,
+        "specificity": 0.9942
+    },
+    {
+        "sample_idx": 235,
+        "dice_per_class": [
+            0.9996,
+            0.9386,
+            0.9585,
+            0.9515
+        ],
+        "mean_dice": 0.9621,
+        "hd95": 1.7321,
+        "sensitivity": 0.9629,
+        "specificity": 0.9962
+    },
+    {
+        "sample_idx": 236,
+        "dice_per_class": [
+            0.9996,
+            0.4766,
+            0.6989,
+            0.9517
+        ],
+        "mean_dice": 0.7817,
+        "hd95": 88.1487,
+        "sensitivity": 0.6958,
+        "specificity": 0.9801
+    },
+    {
+        "sample_idx": 237,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9709,
+            0.9732
+        ],
+        "mean_dice": 0.986,
+        "hd95": 1.4142,
+        "sensitivity": 0.9887,
+        "specificity": 0.9952
+    },
+    {
+        "sample_idx": 238,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9475,
+            0.9693
+        ],
+        "mean_dice": 0.9791,
+        "hd95": 1.4142,
+        "sensitivity": 0.9741,
+        "specificity": 0.9877
+    },
+    {
+        "sample_idx": 239,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.7114,
+            0.8902
+        ],
+        "mean_dice": 0.9003,
+        "hd95": 2.2361,
+        "sensitivity": 0.9687,
+        "specificity": 0.9896
+    },
+    {
+        "sample_idx": 240,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9568,
+            0.9575
+        ],
+        "mean_dice": 0.9786,
+        "hd95": 1.4142,
+        "sensitivity": 0.9802,
+        "specificity": 0.9928
+    },
+    {
+        "sample_idx": 241,
+        "dice_per_class": [
+            0.9999,
+            1.0,
+            0.9276,
+            0.9179
+        ],
+        "mean_dice": 0.9614,
+        "hd95": 1.0,
+        "sensitivity": 0.9513,
+        "specificity": 0.9858
+    },
+    {
+        "sample_idx": 242,
+        "dice_per_class": [
+            0.9993,
+            0.6215,
+            0.8483,
+            0.9308
+        ],
+        "mean_dice": 0.85,
+        "hd95": 11.225,
+        "sensitivity": 0.8546,
+        "specificity": 0.9983
+    },
+    {
+        "sample_idx": 243,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.9436,
+            0.8955
+        ],
+        "mean_dice": 0.9597,
+        "hd95": 2.2361,
+        "sensitivity": 0.9482,
+        "specificity": 0.9915
+    },
+    {
+        "sample_idx": 244,
+        "dice_per_class": [
+            0.9998,
+            0.0851,
+            0.8789,
+            0.8209
+        ],
+        "mean_dice": 0.6962,
+        "hd95": 1.4142,
+        "sensitivity": 0.6428,
+        "specificity": 0.96
+    },
+    {
+        "sample_idx": 245,
+        "dice_per_class": [
+            0.9992,
+            0.9628,
+            0.9279,
+            0.9604
+        ],
+        "mean_dice": 0.9626,
+        "hd95": 2.2361,
+        "sensitivity": 0.9682,
+        "specificity": 0.9928
+    },
+    {
+        "sample_idx": 246,
+        "dice_per_class": [
+            0.999,
+            0.6045,
+            0.817,
+            0.9632
+        ],
+        "mean_dice": 0.8459,
+        "hd95": 10.0499,
+        "sensitivity": 0.9373,
+        "specificity": 0.9748
+    },
+    {
+        "sample_idx": 247,
+        "dice_per_class": [
+            0.9994,
+            0.1235,
+            0.9448,
+            0.7897
+        ],
+        "mean_dice": 0.7144,
+        "hd95": 2.0,
+        "sensitivity": 0.7353,
+        "specificity": 0.994
+    },
+    {
+        "sample_idx": 248,
+        "dice_per_class": [
+            0.9998,
+            0.8972,
+            0.9792,
+            0.9822
+        ],
+        "mean_dice": 0.9646,
+        "hd95": 2.0,
+        "sensitivity": 0.9506,
+        "specificity": 0.9968
+    },
+    {
+        "sample_idx": 249,
+        "dice_per_class": [
+            0.9998,
+            1.0,
+            0.9344,
+            0.7916
+        ],
+        "mean_dice": 0.9315,
+        "hd95": 1.4142,
+        "sensitivity": 0.9222,
+        "specificity": 0.9793
+    },
+    {
+        "sample_idx": 250,
+        "dice_per_class": [
+            0.9994,
+            0.9766,
+            0.9391,
+            0.6042
+        ],
+        "mean_dice": 0.8798,
+        "hd95": 2.0,
+        "sensitivity": 0.8647,
+        "specificity": 0.99
+    },
+    {
+        "sample_idx": 251,
+        "dice_per_class": [
+            0.9996,
+            0.5475,
+            0.9432,
+            0.8894
+        ],
+        "mean_dice": 0.8449,
+        "hd95": 1.7321,
+        "sensitivity": 0.9418,
+        "specificity": 0.9983
+    },
+    {
+        "sample_idx": 252,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9428,
+            0.9292
+        ],
+        "mean_dice": 0.9679,
+        "hd95": 1.4142,
+        "sensitivity": 0.965,
+        "specificity": 0.9836
+    },
+    {
+        "sample_idx": 253,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.8811,
+            0.3744
+        ],
+        "mean_dice": 0.8138,
+        "hd95": 8.6023,
+        "sensitivity": 0.8069,
+        "specificity": 0.9798
+    },
+    {
+        "sample_idx": 254,
+        "dice_per_class": [
+            0.9988,
+            0.8826,
+            0.8844,
+            0.9675
+        ],
+        "mean_dice": 0.9333,
+        "hd95": 2.8284,
+        "sensitivity": 0.9293,
+        "specificity": 0.9918
+    },
+    {
+        "sample_idx": 255,
+        "dice_per_class": [
+            0.9997,
+            1.0,
+            0.9278,
+            0.8482
+        ],
+        "mean_dice": 0.9439,
+        "hd95": 1.4142,
+        "sensitivity": 0.9637,
+        "specificity": 0.9879
+    },
+    {
+        "sample_idx": 256,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.7816,
+            0.9163
+        ],
+        "mean_dice": 0.9244,
+        "hd95": 1.4142,
+        "sensitivity": 0.9011,
+        "specificity": 0.9704
+    },
+    {
+        "sample_idx": 257,
+        "dice_per_class": [
+            0.9981,
+            0.7536,
+            0.9032,
+            0.9476
+        ],
+        "mean_dice": 0.9006,
+        "hd95": 3.0,
+        "sensitivity": 0.9166,
+        "specificity": 0.9966
+    },
+    {
+        "sample_idx": 258,
+        "dice_per_class": [
+            0.9984,
+            0.7579,
+            0.8743,
+            0.9345
+        ],
+        "mean_dice": 0.8913,
+        "hd95": 2.4495,
+        "sensitivity": 0.8832,
+        "specificity": 0.9954
+    },
+    {
+        "sample_idx": 259,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.9188,
+            0.9524
+        ],
+        "mean_dice": 0.9677,
+        "hd95": 1.4142,
+        "sensitivity": 0.9792,
+        "specificity": 0.992
+    },
+    {
+        "sample_idx": 260,
+        "dice_per_class": [
+            0.9978,
+            1.0,
+            0.8848,
+            0.8179
+        ],
+        "mean_dice": 0.9251,
+        "hd95": 4.899,
+        "sensitivity": 0.917,
+        "specificity": 0.9681
+    },
+    {
+        "sample_idx": 261,
+        "dice_per_class": [
+            0.9994,
+            0.7313,
+            0.9581,
+            0.9685
+        ],
+        "mean_dice": 0.9143,
+        "hd95": 2.4495,
+        "sensitivity": 0.9206,
+        "specificity": 0.9966
+    },
+    {
+        "sample_idx": 262,
+        "dice_per_class": [
+            0.9995,
+            1.0,
+            0.8835,
+            0.7924
+        ],
+        "mean_dice": 0.9189,
+        "hd95": 2.0,
+        "sensitivity": 0.9347,
+        "specificity": 0.9969
+    },
+    {
+        "sample_idx": 263,
+        "dice_per_class": [
+            0.9994,
+            0.8059,
+            0.7152,
+            0.9412
+        ],
+        "mean_dice": 0.8654,
+        "hd95": 1.7321,
+        "sensitivity": 0.8016,
+        "specificity": 0.9851
+    },
+    {
+        "sample_idx": 264,
+        "dice_per_class": [
+            0.9998,
+            0.9176,
+            0.95,
+            0.9618
+        ],
+        "mean_dice": 0.9573,
+        "hd95": 1.4142,
+        "sensitivity": 0.9506,
+        "specificity": 0.9966
+    },
+    {
+        "sample_idx": 265,
+        "dice_per_class": [
+            0.9972,
+            0.805,
+            0.8419,
+            0.8587
+        ],
+        "mean_dice": 0.8757,
+        "hd95": 2.8284,
+        "sensitivity": 0.8744,
+        "specificity": 0.9752
+    },
+    {
+        "sample_idx": 266,
+        "dice_per_class": [
+            0.9996,
+            1.0,
+            0.8958,
+            0.9593
+        ],
+        "mean_dice": 0.9637,
+        "hd95": 1.4142,
+        "sensitivity": 0.9706,
+        "specificity": 0.9883
+    },
+    {
+        "sample_idx": 267,
+        "dice_per_class": [
+            0.9984,
+            0.0,
+            0.9269,
+            0.9115
+        ],
+        "mean_dice": 0.7092,
+        "hd95": 2.8284,
+        "sensitivity": 0.7411,
+        "specificity": 0.9931
+    },
+    {
+        "sample_idx": 268,
+        "dice_per_class": [
+            0.9977,
+            0.8847,
+            0.8792,
+            0.7424
+        ],
+        "mean_dice": 0.876,
+        "hd95": 4.4721,
+        "sensitivity": 0.8475,
+        "specificity": 0.9643
+    },
+    {
+        "sample_idx": 269,
+        "dice_per_class": [
+            0.9987,
+            1.0,
+            0.905,
+            0.9284
+        ],
+        "mean_dice": 0.958,
+        "hd95": 2.4495,
+        "sensitivity": 0.98,
+        "specificity": 0.9969
+    }
+]

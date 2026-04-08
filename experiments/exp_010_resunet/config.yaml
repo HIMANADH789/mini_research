@@ -1,0 +1,58 @@
+# ============================================================
+# Experiment: ResUNet (Residual UNet) — Phase 1 Strong CNN Baseline
+# ============================================================
+# Architecture: 5-level ResUNet with residual skip connections
+#   Channels: 32 → 64 → 128 → 256 → 512 (bottleneck)
+#   Residual blocks prevent vanishing gradients in deeper network
+#   Expected: stronger than UNet3D v1 (+2-4% mean Dice)
+#
+# Data pipeline: v0 (existing validated pipeline — same as Exp 6-8)
+# Trainer:       segmentation_v2 (warmup + grad clip + per-class Dice log)
+# Evaluator:     evaluation_v1   (75% overlap + CC filter)
+# ============================================================
+
+name: resunet
+seed: 42
+use_gpu: true
+
+versions:
+  data: v0
+  trainer: segmentation_v2
+  evaluation: v1
+
+data:
+  train_root: data/raw/brats-gli/training/training_data1_v2
+  val_ratio: 0.2
+  patch_size: [128, 128, 128]
+  tumor_ratio: 0.8              # 80% tumor-centered, 50% of those TC-biased
+  num_workers: 4
+  max_samples: null
+
+model:
+  type: resunet
+  in_channels: 4               # T1c, T1n, T2f, T2w
+  out_channels: 4              # BG, TC, ED, ET
+  base_channels: 32            # → [32, 64, 128, 256, 512]
+
+training:
+  epochs: 150
+  batch_size: 1
+  lr: 0.0001
+  lr_min: 1.0e-6
+  mixed_precision: true
+  warmup_epochs: 5             # linear warmup before cosine decay
+  grad_clip: 1.0               # max gradient norm
+
+optimizer:
+  type: adam                   # standard Adam for CNN baseline
+  weight_decay: 1.0e-4
+
+loss:
+  type: weighted_dice_focal_ce
+  class_weights: [0.1, 3.0, 1.0, 2.0]   # BG, TC, ED, ET
+  focal_weight: 0.5
+
+evaluation:
+  overlap: 0.75                # 75% sliding window overlap
+  cc_filter: true              # remove small isolated components
+  cc_min_size: 50              # minimum component size (voxels)
