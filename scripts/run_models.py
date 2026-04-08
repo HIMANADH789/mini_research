@@ -20,17 +20,25 @@ CONFIGS_V1 = [
     "configs/exp_unetpp_v1.yaml",
 ]
 
-# Phase 1 strong CNN baselines:
+# Phase 4 — Strong CNN Baselines:
 #   data_v1 (augmentation + percentile clip + TC-biased sampling)
 #   segmentation_v2 (warmup + grad clip + per-class Dice log + deep sup)
-#   evaluation_v1 (75% overlap + CC filter + per-sample metrics)
-CONFIGS_PHASE1_BASELINES = [
-    "configs/exp_resunet.yaml",       # Exp 9:  ResUNet (5-level residual)
-    "configs/exp_unetpp_ds.yaml",     # Exp 10: UNet++ with deep supervision
+#   evaluation_v1   (75% overlap + CC filter + per-sample metrics)
+CONFIGS_PHASE_CNN = [
+    "configs/exp_resunet.yaml",       # Exp 9:  ResUNet  (5-level residual, TC=0.816)
+    "configs/exp_unetpp_ds.yaml",     # Exp 10: UNet++ DS (dense + DS, TC=0.825) BEST CNN
+]
+
+# Phase 5 — Transformer Baselines:
+#   data_v2        (extended augmentation: rotation, gamma, zoom)
+#   segmentation_v3 (AdamW, warmup=20, val-based best checkpoint, poly LR option)
+#   evaluation_v2   (TTA 8-flip + standard BraTS WT/TC/ET metrics)
+CONFIGS_PHASE_TRANSFORMER = [
+    "configs/exp_swinunetr.yaml",     # Exp 11: SwinUNETR (3D Swin + UNet decoder)
 ]
 
 # Active run — set to the group you want to train next
-CONFIGS = CONFIGS_PHASE1_BASELINES
+CONFIGS = CONFIGS_PHASE_TRANSFORMER
 
 
 def run_command(cmd):
@@ -47,15 +55,24 @@ def get_latest_experiment():
     return exp_dirs[-1]
 
 
-def get_best_or_latest_checkpoint(exp_dir):
+def get_best_checkpoint(exp_dir):
     """
-    Prefer best.pth (saved by segmentation_v2 trainer on lowest loss).
-    Fall back to the last epoch checkpoint if best.pth not present.
+    Checkpoint priority:
+      1. best.pth       — saved by trainer v3 based on validation TC Dice
+      2. best_train.pth — saved by trainer v3 based on training loss (fallback)
+      3. Last epoch     — final epoch checkpoint (legacy fallback)
     """
-    best_ckpt = os.path.join(exp_dir, "checkpoints", "best.pth")
-    if os.path.exists(best_ckpt):
-        return best_ckpt
+    # Priority 1: validation-based best (trainer v3)
+    best_val = os.path.join(exp_dir, "checkpoints", "best.pth")
+    if os.path.exists(best_val):
+        return best_val
 
+    # Priority 2: training-loss best (trainer v3 fallback)
+    best_train = os.path.join(exp_dir, "checkpoints", "best_train.pth")
+    if os.path.exists(best_train):
+        return best_train
+
+    # Priority 3: last epoch checkpoint (trainer v0-v2 compatibility)
     ckpts = sorted(glob.glob(os.path.join(exp_dir, "checkpoints", "epoch_*.pth")))
     if not ckpts:
         raise ValueError(f"No checkpoints found in {exp_dir}")
@@ -79,7 +96,7 @@ def main():
         print(f"[INFO] Latest experiment: {exp_dir}")
 
         # ── Locate checkpoint ─────────────────────────────────
-        ckpt = get_best_or_latest_checkpoint(exp_dir)
+        ckpt = get_best_checkpoint(exp_dir)
         print(f"[INFO] Using checkpoint: {ckpt}")
 
         # ── Evaluate ──────────────────────────────────────────

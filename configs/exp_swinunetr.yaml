@@ -1,0 +1,95 @@
+# ============================================================
+# Experiment: SwinUNETR — Transformer Baseline (Phase 5)
+# ============================================================
+# Architecture: 3D Swin Transformer encoder + UNet decoder
+#   4 encoder stages: 64³×48 → 32³×96 → 16³×192 → 8³×384
+#   Window-based attention (ws=7) with shifted windows (SW-MSA)
+#   Relative position bias | Stochastic depth (drop_path=0.2)
+#   UNet decoder with residual ConvBlocks + skip connections
+#   Deep supervision: [main(128³), ds1(16³), ds2(32³)]
+#   ~31M parameters
+#
+# Why 300 epochs:
+#   Transformers converge significantly slower than CNNs.
+#   300 epochs with 20-epoch warmup gives 280 epochs of
+#   cosine annealing for fine-grained convergence.
+#
+# Why warmup_epochs=20:
+#   Random attention weights at init produce large gradient spikes.
+#   Linear warmup from near-zero prevents instability in early training.
+#
+# Why AdamW (weight_decay=0.01):
+#   Decoupled weight decay is critical for transformer regularization.
+#   AdamW weight decay applies to weights only, not biases / LN params.
+#   weight_decay=0.01 is the standard setting (Swin/BERT/ViT literature).
+#
+# Why TTA=true in evaluation:
+#   8-flip TTA adds ~+0.5-1.5% Dice with zero additional training.
+#   SwinUNETR benefits more from TTA than CNNs due to asymmetric attention.
+#
+# Data pipeline: v2 (extended augmentation: rotation, gamma, zoom)
+# Trainer:       segmentation_v3 (validation-based best ckpt, AdamW, warmup=20)
+# Evaluator:     evaluation_v2   (TTA + standard BraTS metrics)
+# ============================================================
+
+name: swinunetr
+seed: 42
+use_gpu: true
+
+versions:
+  data: v2
+  trainer: segmentation_v3
+  evaluation: v2
+
+data:
+  train_root: data/raw/brats-gli/training/training_data1_v2
+  val_ratio: 0.2
+  patch_size: [128, 128, 128]
+  tumor_ratio: 0.8
+  num_workers: 4
+  max_samples: null
+
+model:
+  type: swinunetr
+  in_channels: 4               # T1c, T1n, T2f, T2w
+  out_channels: 4              # BG, TC, ED, ET
+  feature_size: 48             # embed_dim (standard SwinUNETR)
+  window_size: 7               # local attention window (ws³ = 343 tokens)
+  depths: [2, 2, 2, 2]         # transformer blocks per stage
+  num_heads: [3, 6, 12, 24]   # attention heads per stage
+  drop_path_rate: 0.2          # stochastic depth rate (0.2 = strong regularization)
+  mlp_ratio: 4.0               # MLP hidden dim = 4 × embed_dim
+
+training:
+  epochs: 300
+  batch_size: 1
+  lr: 0.0001
+  lr_min: 1.0e-6
+  lr_policy: cosine            # cosine | poly
+  mixed_precision: true
+  warmup_epochs: 20            # linear warmup before cosine (critical for transformers)
+  grad_clip: 1.0               # clip gradient norm — prevents attention spike instability
+  val_every: 10                # validate on val set every N epochs
+  ds_weights: [1.0, 0.5, 0.25]  # [main, ds1(16³), ds2(32³)] deep supervision weights
+  use_ema: true                # exponential moving average of weights for validation/eval
+  ema_decay: 0.9999            # high decay = slow averaging = smoother final weights
+
+optimizer:
+  type: adamw                  # AdamW = Adam + decoupled weight decay
+  weight_decay: 0.01           # standard transformer weight decay
+
+loss:
+  type: weighted_dice_focal_ce
+  class_weights: [0.1, 3.0, 1.0, 2.0]   # BG, TC, ED, ET
+  focal_weight: 0.5
+  # Boundary-aware loss — directly minimizes HD95
+  # Applied only to main output (full resolution), not DS auxiliary heads
+  boundary_weight: 0.4         # weight of (boundary_dice + surface_loss) term
+  boundary_factor: 5.0         # upweight boundary voxels by this factor
+  boundary_width: 2            # morphological dilation radius for boundary region
+
+evaluation:
+  overlap: 0.875               # 87.5% sliding window overlap — denser coverage, better HD95
+  cc_filter: true              # remove small isolated components
+  cc_min_size: 50
+  tta: true                    # 8-flip test-time augmentation ensemble

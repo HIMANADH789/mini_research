@@ -289,6 +289,6 @@ class Trainer:
                 self.best_loss = avg_loss
                 best_path = os.path.join(self.exp_path, "checkpoints", "best.pth")
                 save_model(self.model, best_path)
-                self.logger.info(f"  → Best checkpoint updated (loss: {avg_loss:.4f})")
+                self.logger.info(f"  -> Best checkpoint updated (loss: {avg_loss:.4f})")
 
         self.logger.info("Training Finished")
