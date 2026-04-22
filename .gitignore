@@ -1,5 +1,7 @@
 # Virtual environment
 .venv/
+venv/
+env/
 
 # Large datasets
 data/
@@ -12,6 +14,7 @@ experiments/*/artifacts/
 experiments/*/paper_assets/
 experiments/*/runs/
 experiments/*/outputs/
+experiments/*/logs/
 
 # Search results
 search_results/
@@ -23,6 +26,58 @@ reports/
 **/__pycache__/
 *.pyc
 *.pyo
+*.pyd
 
 # Temp files from atomic writes
-*.tmp
+*.tmp
+
+# PyTorch checkpoints and model files
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Test output files
+scripts/integration_output.txt
+scripts/pipeline_check.txt
+scripts/_test_ckpt.pt
+
+# Jupyter / IPython
+.ipynb_checkpoints/
+*.ipynb
+
+# IDE / Editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+*.whl
+
+# Logs
+*.log
+
+# Environment / secrets
+.env
+.env.*
+
+# Coverage / testing
+.coverage
+htmlcov/
+.pytest_cache/
+.mypy_cache/
+
+# Profiling
+*.prof
+*.lprof
