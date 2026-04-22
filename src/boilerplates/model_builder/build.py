@@ -5,6 +5,14 @@ from src.boilerplates.models.resunet       import ResUNet
 from src.boilerplates.models.unetpp_ds     import UNetPPDS
 from src.boilerplates.models.swinunetr     import SwinUNETR
 
+# SABiT: imported on demand (module may not exist yet during development)
+_SABIT_AVAILABLE = False
+try:
+    from src.boilerplates.models.sabit import SABiT
+    _SABIT_AVAILABLE = True
+except ImportError:
+    pass
+
 
 def build_model(config):
 
@@ -28,6 +36,18 @@ def build_model(config):
     elif model_type == "swinunetr":
         return SwinUNETR(config)
 
+    elif model_type == "sabit":
+        if not _SABIT_AVAILABLE:
+            raise ImportError(
+                "SABiT model module not found. "
+                "Ensure src/boilerplates/models/sabit/ exists with __init__.py "
+                "exporting the SABiT class."
+            )
+        return SABiT(config)
+
     else:
-        raise ValueError(f"Unknown model type: '{model_type}'. "
-                         f"Available: unet3d, attention_unet, unetpp, resunet, unetpp_ds, swinunetr")
+        raise ValueError(
+            f"Unknown model type: '{model_type}'. "
+            f"Available: unet3d, attention_unet, unetpp, resunet, unetpp_ds, swinunetr, sabit"
+        )
+

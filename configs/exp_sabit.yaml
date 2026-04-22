@@ -1,0 +1,119 @@
+# ============================================================
+# Experiment: SABiT — Structure-Aware Bi-Level Transformer
+# ============================================================
+# Architecture: Swin encoder stages 0-2 + SABiT bottleneck + UNet decoder
+#   Stage 0:  64³ × 48  (Swin blocks, ws=7)
+#   Stage 1:  32³ × 96  (Swin blocks, ws=7)
+#   Stage 2:  16³ × 192 (Swin blocks, ws=7)
+#   Stage 3:   8³ × 384 (SABiT blocks — Prior + StructureNet + GraphBiasedAttention)
+#   Decoder:  UNet with skip connections
+#   Deep supervision: [main(128³), ds1(16³), ds2(32³)]
+#   ~11M parameters
+#
+# SABiT-specific:
+#   - HyperFidelityPriorBuilder: 4-kernel anatomical prior (spatial, intensity, boundary, stability)
+#   - EvidentialGraphLearner: Dirichlet-based edge uncertainty
+#   - GraphBiasedAttention: Gated structure bias in MHSA
+#   - Bi-level optimization: primary (transformer+decoder) + auxiliary (prior+structure at 0.1× LR)
+#   - Auxiliary losses: L_prior, L_smooth, L_eig, L_evid with linear warmup
+#
+# Why 300 epochs:
+#   Transformers converge slowly. 300 epochs with 20-epoch warmup and
+#   cosine annealing ensures fine-grained convergence.
+#
+# Why gradient_checkpointing=true:
+#   SABiT with full graph attention at 8³=512 tokens fits in 16GB VRAM
+#   with gradient checkpointing. Trades ~30% speed for ~40% VRAM savings.
+#
+# Why accumulate_steps=4:
+#   Effective batch size = 1 × 4 = 4. Critical for stable training of
+#   structure-aware components on 16GB GPU.
+#
+# Data pipeline: v2 (extended augmentation)
+# Trainer:       segmentation_v5 (bi-level optimizer, gradient accumulation, spectral logging)
+# Evaluator:     v2 (TTA + standard BraTS metrics)
+# ============================================================
+
+name: sabit
+seed: 42
+use_gpu: true
+
+versions:
+  data: v2
+  trainer: segmentation_v5
+  evaluation: v2
+
+data:
+  train_root: data/raw/brats-gli/training/training_data1_v2
+  val_ratio: 0.2
+  patch_size: [128, 128, 128]
+  tumor_ratio: 0.8
+  num_workers: 4
+  max_samples: null
+
+model:
+  type: sabit
+  in_channels: 4               # T1c, T1n, T2f, T2w
+  out_channels: 4              # BG, WT, TC, ET
+  feature_size: 48             # embed_dim (same as SwinUNETR for fair comparison)
+  window_size: 7               # Swin window size (stages 0-2)
+  depths: [2, 2, 2, 2]         # blocks per stage (last stage = SABiT blocks)
+  num_heads: [3, 6, 12, 24]    # attention heads per stage
+  drop_path_rate: 0.2          # stochastic depth
+  mlp_ratio: 4.0               # FFN hidden = 4 × embed_dim
+
+  # SABiT-specific
+  prior_top_k: 32              # k-NN edges in structural prior
+  prior_d_prior: 16            # prior kernel feature dim
+  structure_d_pair: 64         # pairwise feature dim for StructureNet
+  structure_n_evidence: 4      # Dirichlet evidence classes
+  gradient_checkpointing: true # save ~40% VRAM on stages 0-2
+
+training:
+  epochs: 300
+  batch_size: 1
+  lr: 0.0001
+  lr_min: 1.0e-6
+  lr_policy: cosine
+  mixed_precision: true
+  warmup_epochs: 20
+  grad_clip: 1.0
+  val_every: 10
+  ds_weights: [1.0, 0.5, 0.25]
+  use_ema: true
+  ema_decay: 0.9999
+
+  # SABiT-specific training params
+  accumulate_steps: 4          # effective batch size = 4
+  gradient_checkpointing: true
+  aux_lr: 0.00001              # 0.1× of primary LR for prior+structure params
+  spectral_log_every: 1        # log spectral metrics every epoch
+
+  # Auxiliary loss warmup schedule (managed by model)
+  aux_warmup:
+    prior_start: 20            # epoch to start ramping L_prior
+    prior_end: 50
+    smooth_start: 20
+    smooth_end: 50
+    eig_start: 30
+    eig_end: 60
+    evid_start: 10
+    evid_end: 30
+
+optimizer:
+  type: adamw
+  weight_decay: 0.01
+
+loss:
+  type: weighted_dice_focal_ce
+  class_weights: [0.1, 3.0, 1.0, 2.0]   # BG, TC, ED, ET
+  focal_weight: 0.5
+  boundary_weight: 0.4
+  boundary_factor: 5.0
+  boundary_width: 2
+
+evaluation:
+  overlap: 0.875
+  cc_filter: true
+  cc_min_size: 50
+  tta: true

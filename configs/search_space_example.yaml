@@ -1,0 +1,48 @@
+# ============================================================
+# Search Space Example — SABiT Hyperparameter Search
+# ============================================================
+# Usage:
+#   python scripts/run_search.py --space configs/search_space_example.yaml
+#
+# This performs a GRID SEARCH over the combinations below.
+# To do random search, change method: random and set max_trials.
+# ============================================================
+
+search:
+  method: grid          # grid | random
+  max_trials: 20        # for random search: max number of sampled trials
+                        # for grid search: hard cap on combinations
+  metric: tc_dice       # metric to optimize (must be in evaluation_results.json)
+  mode: max             # max | min
+  seed: 42              # for reproducible random sampling
+
+# Base config to start from. All parameters here will be overridden
+# by the space below. The base config must be a valid experiment YAML.
+base_config: configs/exp_swinunetr.yaml
+
+# Search space: each key is a dot-path into the config,
+# each value is a list of options to try.
+#
+# Supported value types:
+#   - scalars:  1e-4, 64, 0.5, true
+#   - lists:    [0.4, 0.4, 0.2]  (treated as a SINGLE value — a list param)
+#   - options:  [val1, val2, val3]
+#
+# The grid search will try ALL combinations of these values.
+space:
+  training.lr:
+    - 1.0e-4
+    - 5.0e-5
+
+  model.feature_size:
+    - 24
+    - 48
+
+  loss.focal_weight:
+    - 0.3
+    - 0.5
+
+# ── Optional: fix certain params across all trials ─────────
+# (These are already in the base config, but shown here for clarity)
+# training.epochs: 100       # keep short during search
+# training.val_every: 10

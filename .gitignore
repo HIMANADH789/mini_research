@@ -6,6 +6,23 @@ data/
 
 # Experiment artifacts (large/generated)
 experiments/*/checkpoints/
+experiments/*/plots/
+experiments/*/tables/
+experiments/*/artifacts/
+experiments/*/paper_assets/
+experiments/*/runs/
+experiments/*/outputs/
+
+# Search results
+search_results/
+
+# Aggregate reports
+reports/
 
 # Common Python cache artifacts
 **/__pycache__/
+*.pyc
+*.pyo
+
+# Temp files from atomic writes
+*.tmp
