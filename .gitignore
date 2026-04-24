@@ -3,24 +3,14 @@
 venv/
 env/
 
-# Large datasets
-data/
+# Large datasets (root-level data/ only — NOT src/boilerplates/data/)
+/data/
 
-# Experiment artifacts (large/generated)
+# Experiment checkpoints (HEAVY — 45-200 MB each)
 experiments/*/checkpoints/
-experiments/*/plots/
-experiments/*/tables/
-experiments/*/artifacts/
-experiments/*/paper_assets/
-experiments/*/runs/
-experiments/*/outputs/
-experiments/*/logs/
 
-# Search results
+# Search results (can be large with many trials)
 search_results/
-
-# Aggregate reports
-reports/
 
 # Common Python cache artifacts
 **/__pycache__/
@@ -31,7 +21,7 @@ reports/
 # Temp files from atomic writes
 *.tmp
 
-# PyTorch checkpoints and model files
+# PyTorch checkpoint files (anywhere in repo)
 *.pt
 *.pth
 *.ckpt
@@ -40,7 +30,7 @@ reports/
 # Test output files
 scripts/integration_output.txt
 scripts/pipeline_check.txt
-scripts/_test_ckpt.pt
+scripts/verification_output.txt
 
 # Jupyter / IPython
 .ipynb_checkpoints/
@@ -64,9 +54,6 @@ build/
 *.egg-info/
 *.egg
 *.whl
-
-# Logs
-*.log
 
 # Environment / secrets
 .env
