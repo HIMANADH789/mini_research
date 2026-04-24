@@ -1,0 +1,17 @@
+﻿python : Traceback (most recent call last):
+At line:1 char:32
++ $env:PYTHONIOENCODING='utf-8'; python -B -c "
++                                ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 30, in <module>
+  File "C:\Users\himan\AppData\Local\Programs\Python\Python311\Lib\encodings\cp1252.py", line 23, in decode
+    return codecs.charmap_decode(input,self.errors,decoding_table)[0]
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 147: character maps to <undefined>
+=================================================================
+  SABiT PLAN vs CODE VERIFICATION
+=================================================================
+
+--- FILE EXISTENCE ---
