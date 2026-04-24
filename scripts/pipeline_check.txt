@@ -1,0 +1,24 @@
+﻿python : Traceback (most recent call last):
+At line:1 char:32
++ $env:PYTHONIOENCODING='utf-8'; python -B -c "
++                                ~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (Traceback (most recent call last)::String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  File "<string>", line 70, in <module>
+  File "C:\Users\himan\AppData\Local\Programs\Python\Python311\Lib\site-packages\torch\nn\modules\module.py", line 
+2639, in load_state_dict
+    raise RuntimeError(
+RuntimeError: Error(s) in loading state_dict for SABiT:
+	Unexpected key(s) in state_dict: "_position_grid", "prior_builder.feature_ema". 
+============================================================
+  SABiT FULL PIPELINE VERIFICATION
+============================================================
+[1/8] Config loaded OK
+       model.type=sabit, trainer=segmentation_v5
+[2/8] Model built: 11,069,181 params
+[3/8] Trainer resolved: src.boilerplates.trainers.segmentation_v5.segmentation_trainer
+[4/8] Evaluator resolved: src.boilerplates.evaluation.evaluation_v2.evaluator
+[5/8] Bi-level optimizer: primary=10,726,296, aux=342,885
+[6/8] Forward pass: main=torch.Size([1, 4, 64, 64, 64])
+[7/8] Loss+backward: loss=11.1831, 232 param grads, aux_losses=['prior', 'smooth', 'eig', 'evid']

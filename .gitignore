@@ -27,10 +27,6 @@ search_results/
 *.ckpt
 *.safetensors
 
-# Test output files
-scripts/integration_output.txt
-scripts/pipeline_check.txt
-scripts/verification_output.txt
 
 # Jupyter / IPython
 .ipynb_checkpoints/
