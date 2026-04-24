@@ -87,7 +87,14 @@ class ModelEMA:
     def update(self, model):
         for ema_p, m_p in zip(self.ema_model.parameters(), model.parameters()):
             ema_p.data.mul_(self.decay).add_(m_p.data, alpha=1.0 - self.decay)
-        for ema_b, m_b in zip(self.ema_model.buffers(), model.buffers()):
+        # Use named buffers for safe matching (handles None, shape changes)
+        model_bufs = {n: b for n, b in model.named_buffers()}
+        for name, ema_b in self.ema_model.named_buffers():
+            if ema_b is None or name not in model_bufs:
+                continue
+            m_b = model_bufs[name]
+            if m_b is None or ema_b.shape != m_b.shape:
+                continue
             if ema_b.dtype.is_floating_point:
                 ema_b.data.mul_(self.decay).add_(m_b.data, alpha=1.0 - self.decay)
             else:

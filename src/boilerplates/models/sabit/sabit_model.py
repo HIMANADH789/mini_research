@@ -202,8 +202,8 @@ class SABiT(nn.Module):
             "evid":   (10, 30),
         }
 
-        # Position grid buffer (built once, on first forward)
-        self.register_buffer("_position_grid", None)
+        # Position grid cache (built once, on first forward — NOT a buffer)
+        self._position_grid = None
 
         self._init_weights()
 
