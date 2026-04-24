@@ -326,7 +326,7 @@ class EvidentialGraphLearner(nn.Module):
 
         # ── Step 8: Scatter back to dense [B, N, N] ──────────────
         A_effective = torch.zeros(B, N, N, device=device, dtype=h.dtype)
-        A_effective.scatter_(2, neighbor_idx, A_gated)
+        A_effective.scatter_(2, neighbor_idx, A_gated.to(h.dtype))
 
         # ── Step 9: Symmetrize + ReLU + row-normalize ────────────
         A_effective = (A_effective + A_effective.transpose(-1, -2)) / 2.0
@@ -338,7 +338,7 @@ class EvidentialGraphLearner(nn.Module):
 
         # ── Step 10: Scatter uncertainty map ──────────────────────
         uncertainty = torch.zeros(B, N, N, device=device, dtype=h.dtype)
-        uncertainty.scatter_(2, neighbor_idx, u)
+        uncertainty.scatter_(2, neighbor_idx, u.to(h.dtype))
 
         # ── Diagnostics ──────────────────────────────────────────
         ev_info = {

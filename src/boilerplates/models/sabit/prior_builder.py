@@ -383,7 +383,7 @@ class HyperFidelityPriorBuilder(nn.Module):
         vals, idx = A_combined.topk(k, dim=-1)  # [B, N, k]
 
         A_sparse = torch.zeros_like(A_combined)
-        A_sparse.scatter_(-1, idx, vals)
+        A_sparse.scatter_(-1, idx, vals.to(A_sparse.dtype))
 
         # ── Row normalization → stochastic matrix ─────────────────
         row_sums = A_sparse.sum(-1, keepdim=True).clamp(min=1e-8)
